@@ -68,3 +68,23 @@ alone  4 (  69 min) | E 1.98 I 4.25 Hz | E-E w: inside group 31.99, to next 11.5
       order of groups: 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 0 1
 alone  5 (  71 min) | E 2.04 I 4.31 Hz | E-E w: inside group 31.84, to next 11.73, to previous 2.09, others 1.46; I-E 63.5 | 2 s alone: E 2.08 Hz, a group is on 81 % of the time, stays 13 ms, 127 changes, 100 % of them to the NEXT group | 221 s
       order of groups: 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+alone  6 (  73 min) | E 2.08 I 4.36 Hz | E-E w: inside group 31.68, to next 11.88, to previous 2.18, others 1.46; I-E 63.6 | 2 s alone: E 2.09 Hz, a group is on 80 % of the time, stays 13 ms, 127 changes, 99 % of them to the NEXT group | 224 s
+      order of groups: 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12
+alone  7 (  75 min) | E 2.10 I 4.38 Hz | E-E w: inside group 31.53, to next 11.99, to previous 2.28, others 1.45; I-E 63.7 | 2 s alone: E 2.11 Hz, a group is on 78 % of the time, stays 12 ms, 129 changes, 99 % of them to the NEXT group | 224 s
+      order of groups: 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+alone  8 (  77 min) | E 2.12 I 4.40 Hz | E-E w: inside group 31.38, to next 12.08, to previous 2.38, others 1.45; I-E 63.9 | 2 s alone: E 2.10 Hz, a group is on 78 % of the time, stays 12 ms, 129 changes, 100 % of them to the NEXT group | 223 s
+      order of groups: 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+alone  9 (  79 min) | E 2.12 I 4.41 Hz | E-E w: inside group 31.23, to next 12.15, to previous 2.47, others 1.45; I-E 64.0 | 2 s alone: E 2.09 Hz, a group is on 77 % of the time, stays 12 ms, 128 changes, 100 % of them to the NEXT group | 223 s
+      order of groups: 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+alone 10 (  81 min) | E 2.13 I 4.42 Hz | E-E w: inside group 31.08, to next 12.21, to previous 2.57, others 1.45; I-E 64.2 | 2 s alone: E 2.17 Hz, a group is on 82 % of the time, stays 12 ms, 132 changes, 100 % of them to the NEXT group | 225 s
+      order of groups: 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13
+alone 11 (  83 min) | E 2.14 I 4.43 Hz | E-E w: inside group 30.94, to next 12.27, to previous 2.66, others 1.45; I-E 64.3 | 2 s alone: E 2.09 Hz, a group is on 80 % of the time, stays 12 ms, 128 changes, 100 % of them to the NEXT group | 221 s
+      order of groups: 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+alone 12 (  85 min) | E 2.14 I 4.43 Hz | E-E w: inside group 30.79, to next 12.32, to previous 2.76, others 1.45; I-E 64.4 | 2 s alone: E 2.15 Hz, a group is on 81 % of the time, stays 13 ms, 128 changes, 98 % of them to the NEXT group | 225 s
+      order of groups: 11 12 13 14 15 16 17 18 19 20 21 22 23 24 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+alone 13 (  88 min) | E 2.14 I 4.43 Hz | E-E w: inside group 30.65, to next 12.36, to previous 2.85, others 1.45; I-E 64.5 | 2 s alone: E 2.15 Hz, a group is on 80 % of the time, stays 12 ms, 130 changes, 99 % of them to the NEXT group | 221 s
+      order of groups: 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+alone 14 (  90 min) | E 2.15 I 4.43 Hz | E-E w: inside group 30.51, to next 12.41, to previous 2.94, others 1.45; I-E 64.6 | 2 s alone: E 2.18 Hz, a group is on 82 % of the time, stays 12 ms, 133 changes, 100 % of them to the NEXT group | 224 s
+      order of groups: 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6
+alone 15 (  92 min) | E 2.15 I 4.43 Hz | E-E w: inside group 30.37, to next 12.46, to previous 3.02, others 1.45; I-E 64.8 | 2 s alone: E 2.11 Hz, a group is on 76 % of the time, stays 12 ms, 129 changes, 100 % of them to the NEXT group | 223 s
+      order of groups: 20 21 22 23 24 25 26 27 28 29 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
