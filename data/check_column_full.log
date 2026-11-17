@@ -1,0 +1,16 @@
+built: 77169 neurons, 299.7 million synapses, 125 s
+  200 ms simulated, 14 s elapsed
+  400 ms simulated, 29 s elapsed
+  600 ms simulated, 43 s elapsed
+  800 ms simulated, 58 s elapsed
+  1000 ms simulated, 72 s elapsed
+scale 1.000, 1000 ms:
+  L23e    1.00 Hz   published 0.86
+  L23i    3.06 Hz
+  L4e     4.47 Hz   published 4.45
+  L4i     5.91 Hz
+  L5e     7.62 Hz   published 7.59
+  L5i     8.72 Hz
+  L6e     1.10 Hz   published 1.09
+  L6i     7.83 Hz
+total 236 s

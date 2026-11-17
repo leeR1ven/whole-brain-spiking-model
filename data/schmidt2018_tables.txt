@@ -1,0 +1,87 @@
+3 tables
+
+####  Table 1 - List of areas in the model, encompassing all vision-related areas of macaque cortex in the parcellation of [45].
+Areas in the model
+Lobe | Abbreviation | Brain Region
+Occipital | V1 | Visual area 1
+V2 | Visual area 2
+V3 | Visual area 3
+VP | Ventral posterior area
+V3A | Visual area V3A
+V4 | Visual area 4
+VOT | Ventral occipitotemporal area
+V4t | V4 transitional area
+MT | Middle temporal area
+Temporal | FST | Floor of superior temporal area
+PITd | Posterior inferotemporal (dorsal) area
+PITv | Posterior inferotemporal (ventral) area
+CITd | Central inferotemporal (dorsal) area
+CITv | Central inferotemporal (ventral) area
+AITd | Anterior inferotemporal (dorsal) area
+AITv | Anterior inferotemporal (ventral) area
+STPp | Superior temporal polysensory (posterior) area
+STPa | Superior temporal polysensory (anterior) area
+TF | Parahippocampal area TF
+TH | Parahippocampal area TH
+Parietal | MSTd | Medial superior temporal (dorsal) area
+MSTl | Medial superior temporal (lateral) area
+PO | Parieto-occipital area
+PIP | Posterior intraparietal area
+LIP | Lateral intraparietal area
+VIP | Ventral intraparietal area
+MIP | Medial intraparietal area
+MDP | Medial dorsal parietal area
+DP | Dorsal prelunate area
+7a | Area 7a
+Frontal | FEF | Frontal eye field
+46 | Middle frontal area 46
+
+####  Table 2 - Model description after [49].
+Model summary
+Populations | 254 populations: 32 areas (Table 1) with eight populations each (area TH: six)
+Topology | —
+Connectivity | area- and population-specific but otherwise random
+Neuron model | leaky integrate-and-fire (LIF), fixed absolute refractory period (voltage clamp)
+Synapse model | exponential postsynaptic currents
+Plasticity | —
+Input | independent homogeneous Poisson spike trains
+Measurements | spiking activity
+Populations
+Type | Cortex
+Elements | LIF neurons
+Number of populations | 32 areas with eight populations each (area TH: six), two per layer
+Population size | N (area- and population-specific)
+Connectivity
+Type | source and target neurons drawn randomly with replacement (allowing autapses and multapses) with area- and population-specific connection probabilities
+Weights | fixed, drawn from normal distribution with mean J such that postsynaptic potentials have a mean amplitude of 0.15 mV and standard deviation δJ = 0.1J; 4E to 2/3E increased by factor 2 [36]; weights of inhibitory connections increased by factor g; excitatory weights <0 and inhibitory weights >0 are redrawn; cortico-cortical weights onto excitatory and inhibitory populations increased by factor χ and χIχ, respectively
+Delays | fixed, drawn from Gaussian distribution with mean d and standard deviation δd = 0.5d; delays of inhibitory connections factor 2 smaller; delays rounded to the nearest multiple of the simulation step size h = 0.1 ms, inter-area delays drawn from a Gaussian distribution with mean d = s/vt, with distance s and transmission speed vt = 3.5 m/s [46]; and standard deviation δd = d/2, distances determined as the median of the distances between all vertex pairs of the two areas in their surface representation in F99 space, a standard macaque cortical surface included with Caret [47], where the vertex-to-vertex distance is the length of the shortest possible path without crossing the cortical surface [48] (see [35]), delays < 0.1 ms before rounding are redrawn
+Neuron and synapse model
+Name | LIF neuron
+Type | leaky integrate-and-fire, exponential synaptic current inputs
+Subthreshold dynamics | dVdt=-V-ELτm+Is(t)Cm if (t > t* + τr)V(t) = Vr elseIs(t)=∑i,kJke-(t-tik)/τsΘ(t-tik) k: neuron index, i: spike index
+Spiking | If V(t−) < θ ∧ V(t+) ≥ θ 1. set t* = t, 2. emit spike with time stamp t*
+Input
+Type | Background
+Target | LIF neurons
+Description | independent Poisson spikes (for each neuron, fixed rate νext = νbgkext with average external spike rate νbg = 10 spikes/s and number of external inputs per population kext, weight J)
+Measurements
+Spiking activity
+
+####  Table 3 - Parameter specification for synapses and neurons.
+Synapse parameters
+Name | Value | Description
+J ± δJ | Intra-areal connections: 87.8 ± 8.8 pA, cortico-cortical connections scaled as Jcc = χJ, χ ∈ [1, 2.5] cortico-cortical connections onto inhibitory populations scaled as JccI=χIχJ | excitatory synaptic strength
+g | g = 16 in Fig 2A and 2B, g = 11 in all other figures | relative inhibitory synaptic strength
+de ± δde | 1.5 ± 0.75 ms | local excitatory transmission delay
+di ± δdi | 0.75 ± 0.375 ms | local inhibitory transmission delay
+d ± δd | d=s/vt±12s/vt | inter-area transmission delay, with s the distance between areas
+vt | 3.5 m/s | transmission speed
+Neuron model
+Name | Value | Description
+τm | 10 ms | membrane time constant
+τr | 2 ms | absolute refractory period
+τs | 0.5 ms | postsynaptic current time constant
+Cm | 250 pF | membrane capacity
+Vr | −65 mV | reset potential
+θ | −50 mV | fixed firing threshold
+EL | −65 mV | leak potential

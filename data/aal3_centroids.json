@@ -1,0 +1,1330 @@
+{
+"Precentral_L": {
+"center": [
+-38.9,
+-7.0,
+49.6
+],
+"volume_mm3": 28208.0
+},
+"Precentral_R": {
+"center": [
+41.1,
+-9.5,
+50.8
+],
+"volume_mm3": 27048.0
+},
+"Frontal_Sup_2_L": {
+"center": [
+-20.2,
+36.0,
+35.2
+],
+"volume_mm3": 38960.0
+},
+"Frontal_Sup_2_R": {
+"center": [
+22.6,
+33.2,
+37.3
+],
+"volume_mm3": 41008.0
+},
+"Frontal_Mid_2_L": {
+"center": [
+-35.5,
+32.9,
+29.9
+],
+"volume_mm3": 36056.0
+},
+"Frontal_Mid_2_R": {
+"center": [
+38.8,
+32.9,
+29.3
+],
+"volume_mm3": 38880.0
+},
+"Frontal_Inf_Oper_L": {
+"center": [
+-48.8,
+11.5,
+17.8
+],
+"volume_mm3": 8304.0
+},
+"Frontal_Inf_Oper_R": {
+"center": [
+49.9,
+13.7,
+20.2
+],
+"volume_mm3": 11192.0
+},
+"Frontal_Inf_Tri_L": {
+"center": [
+-45.9,
+28.7,
+12.6
+],
+"volume_mm3": 20232.0
+},
+"Frontal_Inf_Tri_R": {
+"center": [
+50.1,
+28.9,
+12.8
+],
+"volume_mm3": 17208.0
+},
+"Frontal_Inf_Orb_2_L": {
+"center": [
+-41.4,
+31.1,
+-8.1
+],
+"volume_mm3": 6512.0
+},
+"Frontal_Inf_Orb_2_R": {
+"center": [
+45.8,
+33.4,
+-8.0
+],
+"volume_mm3": 6992.0
+},
+"Rolandic_Oper_L": {
+"center": [
+-47.4,
+-9.8,
+12.6
+],
+"volume_mm3": 7904.0
+},
+"Rolandic_Oper_R": {
+"center": [
+52.4,
+-7.5,
+13.3
+],
+"volume_mm3": 10648.0
+},
+"Supp_Motor_Area_L": {
+"center": [
+-5.7,
+3.6,
+60.1
+],
+"volume_mm3": 17176.0
+},
+"Supp_Motor_Area_R": {
+"center": [
+8.2,
+-1.1,
+60.5
+],
+"volume_mm3": 18968.0
+},
+"Olfactory_L": {
+"center": [
+-8.0,
+13.9,
+-12.3
+],
+"volume_mm3": 2328.0
+},
+"Olfactory_R": {
+"center": [
+10.1,
+14.7,
+-12.6
+],
+"volume_mm3": 2304.0
+},
+"Frontal_Sup_Medial_L": {
+"center": [
+-5.2,
+47.9,
+29.6
+],
+"volume_mm3": 23936.0
+},
+"Frontal_Sup_Medial_R": {
+"center": [
+8.8,
+49.5,
+28.9
+],
+"volume_mm3": 17072.0
+},
+"Frontal_Med_Orb_L": {
+"center": [
+-5.4,
+52.5,
+-8.9
+],
+"volume_mm3": 5752.0
+},
+"Frontal_Med_Orb_R": {
+"center": [
+7.8,
+50.4,
+-8.5
+],
+"volume_mm3": 6848.0
+},
+"Rectus_L": {
+"center": [
+-5.4,
+35.7,
+-19.6
+],
+"volume_mm3": 6816.0
+},
+"Rectus_R": {
+"center": [
+8.0,
+34.5,
+-19.4
+],
+"volume_mm3": 5960.0
+},
+"OFCmed_L": {
+"center": [
+-14.2,
+35.6,
+-21.1
+],
+"volume_mm3": 4400.0
+},
+"OFCmed_R": {
+"center": [
+16.4,
+37.1,
+-21.3
+],
+"volume_mm3": 4968.0
+},
+"OFCant_L": {
+"center": [
+-25.0,
+46.8,
+-16.1
+],
+"volume_mm3": 3544.0
+},
+"OFCant_R": {
+"center": [
+28.6,
+48.5,
+-16.2
+],
+"volume_mm3": 5184.0
+},
+"OFCpost_L": {
+"center": [
+-28.7,
+23.4,
+-19.5
+],
+"volume_mm3": 4536.0
+},
+"OFCpost_R": {
+"center": [
+33.0,
+24.9,
+-19.4
+],
+"volume_mm3": 4488.0
+},
+"OFClat_L": {
+"center": [
+-42.5,
+39.9,
+-15.1
+],
+"volume_mm3": 1576.0
+},
+"OFClat_R": {
+"center": [
+47.8,
+36.7,
+-16.2
+],
+"volume_mm3": 1504.0
+},
+"Insula_L": {
+"center": [
+-35.4,
+5.4,
+2.2
+],
+"volume_mm3": 14864.0
+},
+"Insula_R": {
+"center": [
+38.7,
+5.0,
+0.8
+],
+"volume_mm3": 14160.0
+},
+"Cingulate_Mid_L": {
+"center": [
+-5.9,
+-16.1,
+40.2
+],
+"volume_mm3": 15528.0
+},
+"Cingulate_Mid_R": {
+"center": [
+7.7,
+-10.2,
+38.4
+],
+"volume_mm3": 17624.0
+},
+"Cingulate_Post_L": {
+"center": [
+-5.2,
+-44.2,
+23.3
+],
+"volume_mm3": 3704.0
+},
+"Cingulate_Post_R": {
+"center": [
+7.2,
+-43.1,
+20.5
+],
+"volume_mm3": 2680.0
+},
+"Hippocampus_L": {
+"center": [
+-25.3,
+-22.0,
+-11.4
+],
+"volume_mm3": 7456.0
+},
+"Hippocampus_R": {
+"center": [
+28.9,
+-21.0,
+-11.6
+],
+"volume_mm3": 7568.0
+},
+"ParaHippocampal_L": {
+"center": [
+-21.5,
+-17.3,
+-21.9
+],
+"volume_mm3": 7824.0
+},
+"ParaHippocampal_R": {
+"center": [
+25.1,
+-16.3,
+-21.7
+],
+"volume_mm3": 9056.0
+},
+"Amygdala_L": {
+"center": [
+-23.5,
+-1.9,
+-18.5
+],
+"volume_mm3": 1760.0
+},
+"Amygdala_R": {
+"center": [
+27.1,
+-0.6,
+-18.8
+],
+"volume_mm3": 1984.0
+},
+"Calcarine_L": {
+"center": [
+-7.5,
+-79.8,
+5.1
+],
+"volume_mm3": 18064.0
+},
+"Calcarine_R": {
+"center": [
+15.7,
+-74.4,
+8.0
+],
+"volume_mm3": 14888.0
+},
+"Cuneus_L": {
+"center": [
+-6.3,
+-81.4,
+25.9
+],
+"volume_mm3": 12168.0
+},
+"Cuneus_R": {
+"center": [
+13.2,
+-80.6,
+26.9
+],
+"volume_mm3": 11392.0
+},
+"Lingual_L": {
+"center": [
+-14.9,
+-68.9,
+-6.0
+],
+"volume_mm3": 16760.0
+},
+"Lingual_R": {
+"center": [
+16.1,
+-68.1,
+-5.2
+],
+"volume_mm3": 18400.0
+},
+"Occipital_Sup_L": {
+"center": [
+-16.8,
+-85.6,
+26.9
+],
+"volume_mm3": 10928.0
+},
+"Occipital_Sup_R": {
+"center": [
+24.0,
+-82.2,
+29.3
+],
+"volume_mm3": 11304.0
+},
+"Occipital_Mid_L": {
+"center": [
+-32.6,
+-82.0,
+14.8
+],
+"volume_mm3": 26120.0
+},
+"Occipital_Mid_R": {
+"center": [
+37.1,
+-81.0,
+18.1
+],
+"volume_mm3": 16784.0
+},
+"Occipital_Inf_L": {
+"center": [
+-36.5,
+-79.6,
+-9.2
+],
+"volume_mm3": 7528.0
+},
+"Occipital_Inf_R": {
+"center": [
+37.9,
+-83.2,
+-9.0
+],
+"volume_mm3": 7912.0
+},
+"Fusiform_L": {
+"center": [
+-31.4,
+-41.4,
+-21.6
+],
+"volume_mm3": 18472.0
+},
+"Fusiform_R": {
+"center": [
+33.7,
+-40.2,
+-21.5
+],
+"volume_mm3": 20144.0
+},
+"Postcentral_L": {
+"center": [
+-42.9,
+-23.8,
+47.5
+],
+"volume_mm3": 31136.0
+},
+"Postcentral_R": {
+"center": [
+41.2,
+-26.8,
+51.3
+],
+"volume_mm3": 30584.0
+},
+"Parietal_Sup_L": {
+"center": [
+-23.7,
+-60.8,
+57.7
+],
+"volume_mm3": 16520.0
+},
+"Parietal_Sup_R": {
+"center": [
+25.8,
+-60.4,
+60.7
+],
+"volume_mm3": 17776.0
+},
+"Parietal_Inf_L": {
+"center": [
+-43.1,
+-47.0,
+45.4
+],
+"volume_mm3": 19576.0
+},
+"Parietal_Inf_R": {
+"center": [
+46.3,
+-47.6,
+48.2
+],
+"volume_mm3": 10760.0
+},
+"SupraMarginal_L": {
+"center": [
+-56.1,
+-34.9,
+29.1
+],
+"volume_mm3": 10048.0
+},
+"SupraMarginal_R": {
+"center": [
+57.3,
+-32.8,
+33.1
+],
+"volume_mm3": 15792.0
+},
+"Angular_L": {
+"center": [
+-44.4,
+-62.1,
+34.3
+],
+"volume_mm3": 9384.0
+},
+"Angular_R": {
+"center": [
+45.2,
+-61.2,
+37.3
+],
+"volume_mm3": 14016.0
+},
+"Precuneus_L": {
+"center": [
+-7.6,
+-57.3,
+46.6
+],
+"volume_mm3": 28224.0
+},
+"Precuneus_R": {
+"center": [
+9.7,
+-57.3,
+42.4
+],
+"volume_mm3": 26120.0
+},
+"Paracentral_Lobule_L": {
+"center": [
+-8.0,
+-26.7,
+68.7
+],
+"volume_mm3": 10792.0
+},
+"Paracentral_Lobule_R": {
+"center": [
+7.1,
+-32.9,
+66.8
+],
+"volume_mm3": 6688.0
+},
+"Caudate_L": {
+"center": [
+-12.6,
+9.1,
+11.0
+],
+"volume_mm3": 6440.0
+},
+"Caudate_R": {
+"center": [
+15.2,
+10.5,
+10.5
+],
+"volume_mm3": 6888.0
+},
+"Putamen_L": {
+"center": [
+-24.3,
+2.5,
+1.2
+],
+"volume_mm3": 7992.0
+},
+"Putamen_R": {
+"center": [
+27.5,
+3.7,
+1.2
+],
+"volume_mm3": 8496.0
+},
+"Pallidum_L": {
+"center": [
+-18.1,
+-1.4,
+-1.0
+],
+"volume_mm3": 2344.0
+},
+"Pallidum_R": {
+"center": [
+20.9,
+-1.1,
+-1.1
+],
+"volume_mm3": 2240.0
+},
+"Heschl_L": {
+"center": [
+-42.3,
+-20.0,
+8.7
+],
+"volume_mm3": 1800.0
+},
+"Heschl_R": {
+"center": [
+45.9,
+-18.1,
+9.0
+],
+"volume_mm3": 1992.0
+},
+"Temporal_Sup_L": {
+"center": [
+-53.4,
+-22.0,
+5.8
+],
+"volume_mm3": 18368.0
+},
+"Temporal_Sup_R": {
+"center": [
+57.8,
+-23.0,
+5.4
+],
+"volume_mm3": 25128.0
+},
+"Temporal_Pole_Sup_L": {
+"center": [
+-40.2,
+13.9,
+-21.4
+],
+"volume_mm3": 10280.0
+},
+"Temporal_Pole_Sup_R": {
+"center": [
+47.9,
+13.5,
+-18.2
+],
+"volume_mm3": 10704.0
+},
+"Temporal_Mid_L": {
+"center": [
+-55.9,
+-35.0,
+-3.6
+],
+"volume_mm3": 39536.0
+},
+"Temporal_Mid_R": {
+"center": [
+57.2,
+-38.6,
+-2.8
+],
+"volume_mm3": 35272.0
+},
+"Temporal_Pole_Mid_L": {
+"center": [
+-36.7,
+13.3,
+-35.4
+],
+"volume_mm3": 6040.0
+},
+"Temporal_Pole_Mid_R": {
+"center": [
+44.0,
+13.2,
+-33.5
+],
+"volume_mm3": 9496.0
+},
+"Temporal_Inf_L": {
+"center": [
+-50.0,
+-29.3,
+-24.5
+],
+"volume_mm3": 25600.0
+},
+"Temporal_Inf_R": {
+"center": [
+53.4,
+-32.1,
+-23.7
+],
+"volume_mm3": 28456.0
+},
+"Cerebellum_Crus1_L": {
+"center": [
+-35.4,
+-67.9,
+-30.3
+],
+"volume_mm3": 20824.0
+},
+"Cerebellum_Crus1_R": {
+"center": [
+38.2,
+-68.4,
+-30.8
+],
+"volume_mm3": 21184.0
+},
+"Cerebellum_Crus2_L": {
+"center": [
+-27.8,
+-74.6,
+-39.4
+],
+"volume_mm3": 15152.0
+},
+"Cerebellum_Crus2_R": {
+"center": [
+32.7,
+-70.4,
+-41.2
+],
+"volume_mm3": 16936.0
+},
+"Cerebellum_3_L": {
+"center": [
+-8.1,
+-38.4,
+-19.8
+],
+"volume_mm3": 1088.0
+},
+"Cerebellum_3_R": {
+"center": [
+13.1,
+-35.7,
+-20.6
+],
+"volume_mm3": 1656.0
+},
+"Cerebellum_4_5_L": {
+"center": [
+-14.3,
+-44.7,
+-18.3
+],
+"volume_mm3": 9000.0
+},
+"Cerebellum_4_5_R": {
+"center": [
+17.9,
+-44.2,
+-19.4
+],
+"volume_mm3": 6888.0
+},
+"Cerebellum_6_L": {
+"center": [
+-22.5,
+-60.3,
+-23.5
+],
+"volume_mm3": 13552.0
+},
+"Cerebellum_6_R": {
+"center": [
+25.4,
+-59.5,
+-24.9
+],
+"volume_mm3": 14360.0
+},
+"Cerebellum_7b_L": {
+"center": [
+-31.6,
+-61.0,
+-46.8
+],
+"volume_mm3": 4680.0
+},
+"Cerebellum_7b_R": {
+"center": [
+33.9,
+-64.4,
+-49.8
+],
+"volume_mm3": 4272.0
+},
+"Cerebellum_8_L": {
+"center": [
+-25.0,
+-55.8,
+-49.1
+],
+"volume_mm3": 15096.0
+},
+"Cerebellum_8_R": {
+"center": [
+25.8,
+-57.6,
+-50.8
+],
+"volume_mm3": 18464.0
+},
+"Cerebellum_9_L": {
+"center": [
+-10.3,
+-50.2,
+-47.2
+],
+"volume_mm3": 6952.0
+},
+"Cerebellum_9_R": {
+"center": [
+10.2,
+-50.8,
+-47.6
+],
+"volume_mm3": 6472.0
+},
+"Cerebellum_10_L": {
+"center": [
+-21.8,
+-35.0,
+-43.1
+],
+"volume_mm3": 1152.0
+},
+"Cerebellum_10_R": {
+"center": [
+26.8,
+-35.0,
+-42.6
+],
+"volume_mm3": 1272.0
+},
+"Vermis_1_2": {
+"center": [
+1.5,
+-40.2,
+-21.4
+],
+"volume_mm3": 416.0
+},
+"Vermis_3": {
+"center": [
+2.1,
+-41.3,
+-12.7
+],
+"volume_mm3": 1824.0
+},
+"Vermis_4_5": {
+"center": [
+1.8,
+-53.6,
+-7.4
+],
+"volume_mm3": 5320.0
+},
+"Vermis_6": {
+"center": [
+1.8,
+-68.4,
+-16.4
+],
+"volume_mm3": 2968.0
+},
+"Vermis_7": {
+"center": [
+1.9,
+-73.2,
+-26.4
+],
+"volume_mm3": 1552.0
+},
+"Vermis_8": {
+"center": [
+1.8,
+-65.7,
+-35.3
+],
+"volume_mm3": 1944.0
+},
+"Vermis_9": {
+"center": [
+1.6,
+-56.2,
+-36.3
+],
+"volume_mm3": 1392.0
+},
+"Vermis_10": {
+"center": [
+1.1,
+-47.1,
+-32.9
+],
+"volume_mm3": 896.0
+},
+"Thal_AV_L": {
+"center": [
+-5.8,
+-6.6,
+8.6
+],
+"volume_mm3": 152.0
+},
+"Thal_AV_R": {
+"center": [
+5.5,
+-5.6,
+8.7
+],
+"volume_mm3": 200.0
+},
+"Thal_LP_L": {
+"center": [
+-10.1,
+-16.9,
+16.1
+],
+"volume_mm3": 200.0
+},
+"Thal_LP_R": {
+"center": [
+8.3,
+-14.6,
+15.1
+],
+"volume_mm3": 224.0
+},
+"Thal_VA_L": {
+"center": [
+-10.6,
+-5.3,
+4.5
+],
+"volume_mm3": 672.0
+},
+"Thal_VA_R": {
+"center": [
+10.3,
+-3.8,
+4.5
+],
+"volume_mm3": 624.0
+},
+"Thal_VL_L": {
+"center": [
+-13.4,
+-12.2,
+7.9
+],
+"volume_mm3": 2120.0
+},
+"Thal_VL_R": {
+"center": [
+12.8,
+-11.1,
+7.3
+],
+"volume_mm3": 2072.0
+},
+"Thal_VPL_L": {
+"center": [
+-17.7,
+-21.3,
+6.4
+],
+"volume_mm3": 1336.0
+},
+"Thal_VPL_R": {
+"center": [
+16.9,
+-20.4,
+5.8
+],
+"volume_mm3": 1280.0
+},
+"Thal_IL_L": {
+"center": [
+-9.8,
+-18.2,
+0.4
+],
+"volume_mm3": 408.0
+},
+"Thal_IL_R": {
+"center": [
+9.5,
+-17.3,
+0.1
+],
+"volume_mm3": 408.0
+},
+"Thal_Re_L": {
+"center": [
+-6.0,
+-9.0,
+-3.0
+],
+"volume_mm3": 16.0
+},
+"Thal_Re_R": {
+"center": [
+6.0,
+-10.0,
+-4.0
+],
+"volume_mm3": 8.0
+},
+"Thal_MDm_L": {
+"center": [
+-4.7,
+-15.9,
+5.4
+],
+"volume_mm3": 936.0
+},
+"Thal_MDm_R": {
+"center": [
+4.2,
+-15.1,
+4.6
+],
+"volume_mm3": 1016.0
+},
+"Thal_MDl_L": {
+"center": [
+-7.7,
+-14.6,
+6.1
+],
+"volume_mm3": 336.0
+},
+"Thal_MDl_R": {
+"center": [
+7.2,
+-13.7,
+6.1
+],
+"volume_mm3": 288.0
+},
+"Thal_LGN_L": {
+"center": [
+-22.3,
+-24.8,
+-4.6
+],
+"volume_mm3": 344.0
+},
+"Thal_LGN_R": {
+"center": [
+21.8,
+-24.6,
+-4.1
+],
+"volume_mm3": 384.0
+},
+"Thal_MGN_L": {
+"center": [
+-15.6,
+-24.9,
+-4.6
+],
+"volume_mm3": 144.0
+},
+"Thal_MGN_R": {
+"center": [
+15.3,
+-24.4,
+-4.7
+],
+"volume_mm3": 112.0
+},
+"Thal_PuI_L": {
+"center": [
+-17.5,
+-29.7,
+0.6
+],
+"volume_mm3": 272.0
+},
+"Thal_PuI_R": {
+"center": [
+17.0,
+-28.8,
+0.7
+],
+"volume_mm3": 264.0
+},
+"Thal_PuM_L": {
+"center": [
+-13.3,
+-28.3,
+7.4
+],
+"volume_mm3": 1480.0
+},
+"Thal_PuM_R": {
+"center": [
+12.1,
+-27.0,
+7.5
+],
+"volume_mm3": 1424.0
+},
+"Thal_PuA_L": {
+"center": [
+-12.3,
+-23.0,
+7.7
+],
+"volume_mm3": 280.0
+},
+"Thal_PuA_R": {
+"center": [
+11.3,
+-21.7,
+7.9
+],
+"volume_mm3": 272.0
+},
+"Thal_PuL_L": {
+"center": [
+-18.7,
+-25.3,
+11.8
+],
+"volume_mm3": 216.0
+},
+"Thal_PuL_R": {
+"center": [
+15.9,
+-22.8,
+13.0
+],
+"volume_mm3": 216.0
+},
+"ACC_sub_L": {
+"center": [
+-4.1,
+30.9,
+-5.5
+],
+"volume_mm3": 1344.0
+},
+"ACC_sub_R": {
+"center": [
+5.5,
+31.8,
+-4.4
+],
+"volume_mm3": 1056.0
+},
+"ACC_pre_L": {
+"center": [
+-5.0,
+43.7,
+7.2
+],
+"volume_mm3": 5016.0
+},
+"ACC_pre_R": {
+"center": [
+8.8,
+43.3,
+12.7
+],
+"volume_mm3": 5184.0
+},
+"ACC_sup_L": {
+"center": [
+-3.8,
+25.3,
+23.1
+],
+"volume_mm3": 4840.0
+},
+"ACC_sup_R": {
+"center": [
+7.9,
+27.5,
+21.2
+],
+"volume_mm3": 4264.0
+},
+"N_Acc_L": {
+"center": [
+-7.9,
+12.5,
+-7.6
+],
+"volume_mm3": 1304.0
+},
+"N_Acc_R": {
+"center": [
+9.9,
+12.5,
+-7.4
+],
+"volume_mm3": 1144.0
+},
+"VTA_L": {
+"center": [
+-3.0,
+-20.0,
+-17.0
+],
+"volume_mm3": 80.0
+},
+"VTA_R": {
+"center": [
+4.7,
+-20.0,
+-16.9
+],
+"volume_mm3": 72.0
+},
+"SN_pc_L": {
+"center": [
+-7.9,
+-19.2,
+-14.8
+],
+"volume_mm3": 256.0
+},
+"SN_pc_R": {
+"center": [
+9.2,
+-18.1,
+-14.4
+],
+"volume_mm3": 264.0
+},
+"SN_pr_L": {
+"center": [
+-9.6,
+-15.1,
+-13.7
+],
+"volume_mm3": 424.0
+},
+"SN_pr_R": {
+"center": [
+10.9,
+-14.8,
+-14.0
+],
+"volume_mm3": 480.0
+},
+"Red_N_L": {
+"center": [
+-4.4,
+-19.9,
+-10.6
+],
+"volume_mm3": 456.0
+},
+"Red_N_R": {
+"center": [
+5.9,
+-19.5,
+-10.7
+],
+"volume_mm3": 464.0
+},
+"LC_L": {
+"center": [
+-4.0,
+-34.8,
+-26.0
+],
+"volume_mm3": 40.0
+},
+"LC_R": {
+"center": [
+6.0,
+-35.2,
+-28.0
+],
+"volume_mm3": 40.0
+},
+"Raphe_D": {
+"center": [
+0.8,
+-27.0,
+-10.4
+],
+"volume_mm3": 144.0
+},
+"Raphe_M": {
+"center": [
+0.0,
+-30.3,
+-22.0
+],
+"volume_mm3": 48.0
+}
+}

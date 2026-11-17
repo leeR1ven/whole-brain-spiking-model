@@ -1,0 +1,34 @@
+2 tables
+
+####  TABLE 1 - Neuron types and numbers in the olivocerebellar scaffold.
+Neuron type | Number of neurons
+MF | 7073
+GoC | 219
+GrC | 88164
+MLI | 1206
+PC | 69
+DCNp | 12
+DCNi | 12
+IO | 12
+
+####  TABLE 2 - Olivocerebellar scaffold connections with convergence/divergence ratios (reported as mean ± Standard Deviation, SD) and corresponding synaptic parameters.
+Convergence (mean ± SD) | Divergence (mean ± SD) | Weight [nS] | Delay [ms] | τ α [ms] | Connection type
+MF-GrC | 4 | 50 ± 22 | 0.15 | 4.0 | 5.8(Prestori et al., 2008) | exc
+MF-GoC | 65 ± 27 | 2 ± 1 | 1.5 | 4.0 | 0.23(Kanichay and Silver, 2008) | exc
+GoC-GrC | 2 ± 1 | 624 ± 267 | 0.6 | 2.0 | 13.6(Mapelli et al., 2009) | inh
+GoC-GoC | 34 ± 8 | 34 ± 9 | 0.3 | 1.0 | 10 | inh
+AA-GoC | 360 ± 81 | 1 | 1.2 | 2.0 | 0.5(Kanichay and Silver, 2008) | exc
+PF-GoC | 1600 | 4 ± 2 | 0.05 | 5.0 | 0.5(Kanichay and Silver, 2008) | exc
+MLI-MLI | 4 ± 2 | 4 | 0.2 | 1.0 | 2 | inh
+PF-MLI | 1004 ± 221 (BC) 1021 ± 221 (SC) | 12 ± 4 (BC)12 ± 5 (SC) | 0.015 | 5.0 | 0.64 | exc
+MLI-PC | 20 | 3 ± 1 | 0.3 | 4.0 (BC)5.0 (SC) | 2.8(He et al., 2015) | inh
+AA-PC | 249 ± 13 | 1 | 0.7 | 2.0 | 1.1(Miyazaki et al., 2004) | exc
+PF-PC | 28401 ± 776 | 23 ± 3 | 0.007 | 5.0 | 1.1(Miyazaki et al., 2004) | exc
+PC-DCNp | 26 ± 2 | 5 ± 1 | 0.4 | 4.0 | 0.7(Uusisaari and Knöpfel, 2008) | inh
+PC-DCNi | 26 ± 4 | 5 ± 1 | 0.12 | 4.0 | 1.14(Uusisaari and Knöpfel, 2008) | inh
+MF-DCNp | 147 | 1 | 0.05 | 4.0 | 1(Wu and Raman, 2017) | exc
+CF-PC | 1 | 6 ± 1 (min = 4; max = 8) | 350.0 | 4.0(Llinás, 2014) | 0.4(Miyazaki et al., 2004) | exc
+CF-MLI | 3 ± 1 | 115 ± 23 | 1.0 | 70.0 ± 10.0(De Zeeuw et al., 2011) | 1.2(Szapiro and Barbour, 2007) | exc
+IO-DCNp | 6 | 6 | 0.1 | 4.0(Hoebeek et al., 2010) | 1(Wu and Raman, 2017) | exc
+IO-DCNi | 6 | 6 | 0.2 | 5.0 | 3.64(Uusisaari and Knöpfel, 2008) | exc
+DCNi-IO | 6 | 6 | 3.0 | 20.0(Best and Regehr, 2009) | 60.0(Best and Regehr, 2009) | inh

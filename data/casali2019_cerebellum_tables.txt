@@ -1,0 +1,60 @@
+4 tables
+
+####  Table 1 - Neuron types, size, and density.
+Type | Soma radius (μm) | Density (neurons/ μm3) *(/ μm2)
+Golgi cell (GoC) | 8 | 9 × 10−6
+Glomerulus (Glom) | 1.5 | 3 × 10−4
+Granule cell (GrC) | 2.5 | 3.9 × 10−3
+Purkinje cell (PC) | 7.5 | 0.45 × 10−3*
+Basket cell (BC) | 6 | 0.5 × 10−4
+Stellate cell (SC) | 4 | 0.5 × 10−4
+DCN glutamatergic cell (DCNC) | 10 | 5 × 10−7
+FOOT: The table reports the density of neurons in the layer volume (neurons/μm3),*except for PCs for which the planar density is used (neurons/μm2). Data for Glom, GrC, GoC, PC, SC, BC from Korbo et al. (1993). The density of DCNC was estimated from the ratio of PCs to DCNCs (Person and Raman, 2012).
+
+####  Table 2 - Neuron-specific parameters.
+Cell type | Cm[pF] | τm(= Cm*Rin) [ms] | EL[mV] | Δtref(spike width)[ms] | Ie[pA] | Vr[mV] | Vth[mV] | τexc[ms] | τinh[ms]
+GoC | 76 | 21 | −65 | 2 | 36.8 | −75 | −55 | 0.5 | 10
+GrC | 3 | 2 | −74 | 1.5 | 0 | −84 | −42 | 0.5 | 10
+PC | 620 | 88 | −62 | 0.8 | 600 | −72 | −47 | 0.5 | 1.6
+BC | 14.6 | 14.6 | −68 | 1.6 | 15.6 | −78 | −53 | 0.64 | 2
+SC | 14.6 | 14.6 | −68 | 1.6 | 15.6 | −78 | −53 | 0.64 | 2
+DCNC | 89 | 57 | −59 | 3.7 | 55.8 | −69 | −48 | 7.1 | 13.6
+FOOT: The table shows the parameters used to define specific neuronal properties in the model. Cm, membrane capacitance; τm, membrane time constant; Rin, input membrane resistance; EL, leakage resting potential; Δtref, refractory period; Ie, endogenous current; Vr, reset potential; Vth, threshold potential; τexc, τinh, excitatory and inhibitory synaptic exponential time constants). Data are obtained from NeuroElectro (https://neuroelectro.org/) (Tripathy et al., 2014).
+
+####  Table 3 - Synaptic parameters for each connection type.
+Connection types | Weight [nS] | Delay[ms]
+Glom-GrC | 9.0 | 4.0
+Glom-GoC | 2.0 | 4.0
+GoC-GrC (GoC-Glom-GrC) | −5.0 | 2.0
+GoC-GoC | −8.0 | 1.0
+aa-GoC | 20.0 | 2.0
+pf-GoC | 0.4 | 5.0
+SC-SC | −2.0 | 1.0
+BC-BC | −2.5 | 1.0
+pf-SC | 0.2 | 5.0
+pf-BC | 0.2 | 5.0
+SC-PC | −8.5 | 5.0
+BC-PC | −9.0 | 4.0
+aa-PC | 75.0 | 2.0
+pf-PC | 0.02 | 5.0
+PC-DCNC | −0.0075 | 4.0
+Glom-DCNC | 0.006 | 4.0
+FOOT: The parameters result from a tuning procedure based on data reported in different papers and summarized in Maex and De Schutter (1998), Solinas et al. (2010), and Sudhakar et al. (2017). A main additional constraint is that the connection weight is larger from aa then pf connections, both for GoCs and PCs (Sims and Hartell, 2005; Cesana et al., 2013).
+
+####  Table 4 - Firing rates.
+Neuron type | N.cells | N. Excited (or inhibited) cells (%) | Before (300 ms) [Hz] | During (50 ms) [Hz] | After (300 ms) [Hz]
+Gloms | 7,070 | ENEST: 2,932 (41%) | 1.0 ± 1.8 | 140.8 ± 4.2 | 0.9 ± 1.8
+ENEURON: 2,932 (41%) | 1.0 ± 1.8 | 140.8 ± 4.2 | 0.9 ± 1.8
+GrCs | 88,158 | ENEST: 26,195 (29%) | 2.0 ± 2.6 | 114.0 ± 32.2 | 1.8 ± 2.5
+ENEURON: 25,240 (28%) | 2.0 ± 2.6 | 114.8 ± 32.8 | 1.8 ± 2.5
+GoCs | 219 | ENEST: 146 (66%) | 22.7 ± 13.1 | 157.1 ± 37.2 | 23.5 ± 11.3
+ENEURON: 153 (69%) | 22.1 ± 12.4 | 154.2 ± 28.9 | 24.9 ± 12.0
+SCs | 603 | ENEST: 445 (73%) | 33.9 ± 15.7 | 126.2 ± 17.4 | 37.0 ± 14.3
+ENEURON: 452 (74%) | 34.2 ± 15.9 | 131.8 ± 19.6 | 36.9 ± 15.0
+BCs | 603 | ENEST: 429 (71%) | 30.1 ± 15.1 | 124.1 ± 18.4 | 33.6 ± 14.0
+ENEURON: 447 (74%) | 29.1 ± 15.3 | 123.3 ± 24.9 | 33.8 ± 14.4
+PCs | 69 | ENEST: 45 (65%) | 58.5 ± 8.5 | 255.5 ± 63.0 | 62.8 ± 8.3
+ENEURON: 47 (68%) | 60.0 ± 9.3 | 256.5 ± 63.8 | 63.0 ± 11.6
+DCNCs | 12 | INEST: 12 (100%) | 16.1 ± 1.2 | 0.0 ± 0.0 | 16.3 ± 0.9
+INEURON: 12 (100%) | 16.6 ± 0.0 | 0.0 ± 0.0 | 16.6 ± 0.0
+FOOT: For each neuronal population, the firing rates (mean ± sd) are reported before, during and after stimulation. Excited (inhibited) cells are defined as those increasing (decreasing) the number of spikes during the stimulus (see Methods). Simulation results are shown for pyNEST (white rows) and for pyNEURON (gray rows). In the column “During stim,” the values indicate the firing rates only averaged on the sub-group “Excited (Inhibited) cells.”

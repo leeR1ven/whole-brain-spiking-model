@@ -1,0 +1,43 @@
+3 tables
+
+####  Table 1 - Power law exponents that apply to the scaling of brain mass, or structure mass, as a function of the number of neurons they contain in rodents, insectivores and primates.
+Rodents | Insectivores | Primates
+Brain mass × neurons | MBR ∼ NBR1.550 | MBR ∼ NBR1.016 | MBR ∼ NBR1.056
+Cortical mass × neurons | MCX ∼ NCX1.744 | MCX ∼ NCX1.520 | MCX ∼ NCX1.077
+Cerebellar mass × neurons | MCB ∼ NCB1.372 | MCB ∼ NCB1.028 | MCB ∼ NCB0.990
+Remaining areas mass × neurons | MRA ∼ NRA1.153 | MRA ∼ NRA0.926 | MRA ∼ NRA1.013
+FOOT: Data are from Herculano-Houzel et al. (2006), Sarko et al. (2009) and Herculano-Houzel et al. (2009). Scaling laws for primate brains do not include human values.
+
+####  Table 2 - Expected values for a generic rodent and primate brains of 1.5 kg, and values observed for the human brain (Azevedo et al., 2009).
+Generic rodent brain | Generic primate brain | Human brain
+Brain mass | 1500 g | 1500 g | 1508 g
+Total number of neurons in brain | 12 billion | 93 billion | 86 billion
+Total number of non-neurons in brain | 46 billion | 112 billion | 85 billion
+Mass, cerebral cortex | 1154 g | 1412 g | 1233 g
+Neurons, cerebral cortex | 2 billion | 25 billion | 16 billion
+Relative size of the cerebral cortex | 77% of brain mass | 94% of brain mass | 82% of brain mass
+Relative number of neurons in cerebral cortex | 17% of brain neurons | 27% of brain neurons | 19% of brain neurons
+Mass, cerebellum | 133 g | 121 g | 154 g
+Neurons, cerebellum | 10 billion | 61 billion | 69 billion
+Relative size of the cerebellum | 9% of brain mass | 8% of brain mass | 10% of brain mass
+FOOT: Notice that although the expected mass of the cerebral cortex and cerebellum are similar for these hypothetical brains, the numbers of neurons that they contain are remarkably different. The human brain thus exhibits seven times more neurons than expected for a rodent brain of its size, but 92% of what would be expected of a hypothetical primate brain of the same size. Expected values were calculated based on the power laws relating structure size and number of neurons (irrespective of body size) that apply to average species values for rodents (Herculano-Houzel et al., 2006) and primate brain
+
+####  Table 3 - Predicted cellular composition of whale and elephant brains if they scaled according to rodent or primate cellular scaling rules.
+Predicted from rodent rules | Predicted from primate rules
+FALSE KILLER WHALE, 3650 G
+Neurons, whole brain | 21 billion | 212 billion
+Mass, cerebral cortex | 3000 g | 3655 g
+Neurons, cerebral cortex | 3 billion | 55 billion
+Neuronal density, cortex | 1000 neurons/mg* | 30–80,000 neurons/mg**
+Mass, cerebellum | 304 g | 279 g
+Neurons, cerebellum | 19 billion | 140 billion
+Neuronal density, cerebellum | 63,500 neurons/mg* | 400–600,000 neurons/mg*
+AFRICAN ELEPHANT, 4200 G
+Neurons, whole brain | 23 billion | 241 billion
+Mass, cerebral cortex | 3488 g | 4245 g
+Neurons, cerebral cortex | 3 billion | 62 billion
+Neuronal density, cortex | 960 neurons/mg* | 30–80,000 neurons/mg***
+Mass, cerebellum | 347 g | 318 g
+Neurons, cerebellum | 21 billion | 159 billion
+Neuronal density, cerebellum | 61,200 neurons/mg* | 400–600,000 neurons/mg*
+FOOT: Neuronal densities (*) predicted from the rodent scaling rules apply to the whole structures, including white matter. Neuronal densities predicted from the primate scaling rules are the range observed in primate gray matter (**) (Herculano-Houzel et al., 2008), and in the primate cerebellum including white matter (***), since neuronal density does not covary with structure size in primates (Herculano-Houzel et al., 2007). Notice the difference in predicted numbers of neurons depending on the scaling rules applied. Given the low neuronal densities observed in the whale and elephant gray matter,

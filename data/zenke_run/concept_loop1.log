@@ -1,0 +1,1 @@
+loop among excitatory cells: ON. Cells whose inputs come from one patch only (>= 100 inputs from it, none from the other patches): SA 159, UA1 183, UA2 163, SB 151, UB1 154, UB2 163, spare1 168, spare2 198, spare3 187

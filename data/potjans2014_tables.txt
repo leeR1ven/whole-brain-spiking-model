@@ -1,0 +1,188 @@
+6 tables
+
+####  Table 1 - Modified physiological connectivity map
+Connection | Existing | Tested | Publication
+L2/3e → L2/3e | 65 | 247 | Thomson, West, et al. (2002) (rat)
+8 | 81 | Thomson, West, et al. (2002) (cat)
+8 | 32 | Bannister and Thomson (2007) (rat)
+3 | 36 | Bannister and Thomson (2007) (cat)
+48 | 549 | Mason et al. (1991)
+32 | 305 | Kapfer et al. (2007)
+22 | 112 | Yoshimura et al. (2005)
+63 | 760 | Holmgren et al. (2003)
+24 | 110 | Ren et al. (2007)
+L2/3e → L2/3i | 6 | 25 | Thomson, West, et al. (2002) (cat)
+22 | 107 | Thomson, West, et al. (2002) (rat)
+151 | 243 | Holmgren et al. (2003)
+19 | 40 | Kapfer et al. (2007) (FS)
+29 | 100 | Kapfer et al. (2007) (SOM)
+L2/3i → L2/3e | 7 | 25 | Thomson, West, et al. (2002) (cat)
+17 | 107 | Thomson, West, et al. (2002) (rat)
+136 | 243 | Holmgren et al. (2003)
+26 | 39 | Kapfer et al. (2007) (FS)
+19 | 39 | Kapfer et al. (2007) (SOM)
+L2/3i → L2/3i | 2 | 2 | Thomson, West, et al. (2002) (cat)
+2 | 8 | Thomson, West, et al. (2002) (rat)
+L4e → L4e | 10 | 139 | Bannister and Thomson (2007) (cat)
+22 | 528 | Bannister and Thomson (2007) (rat)
+4 | 23 | Thomson, West, et al. (2002)
+131 | 655 | Feldmeyer et al. (2005)
+11 | 89 | Beierlein et al. (2003)
+25 | 234 | Maffei et al. (2004)
+L4e → L4i | 8 | 42 | Thomson, West, et al. (2002)
+3 | 21 | Ali et al. (2007) (nonFS)
+11 | 154 | Ali et al. (2007) (FS)
+74 | 172 | Beierlein et al. (2003) (FS)
+36 | 63 | Beierlein et al. (2003) (LTS)
+L4i → L4e | 10 | 64 | Ali et al. (2007) (nonFS)
+10 | 40 | Ali et al. (2007) (FS)
+83 | 190 | Beierlein et al. (2003) (FS)
+26 | 74 | Beierlein et al. (2003) (LTS)
+4 | 42 | Thomson, West, et al. (2002)
+L4i → L4i | 3 | 6 | Thomson, West, et al. (2002)
+L5e → L5e | 15 | 163 | Thomson, West, et al. (2002)
+50 | 500 | Markram et al. (1997)
+218 | 1655 | Le Be and Markram (2006)
+29 | 206 | Le Be and Markram (2006)
+148 | 1233 | Wang et al. (2006)
+26 | 260 | Wang et al. (2006)
+173 | 1450 | Silberberg and Markram (2007)
+L5e → L5i | 19 | 190 | Thomson (1997); Thomson and Deuchars (1997)*
+6 | 79 | Thomson et al. (1995)
+7 | 73 | Thomson, West, et al. (2002)
+L5i → L5e | 9 | 73 | Thomson, West, et al. (2002)
+L5i → L5i | 3 | 5 | Thomson, West, et al. (2002)
+L6e → L6e | 56 | 1512 | Mercer et al. (2005)
+4 | 204 | Beierlein and Connors (2002)
+L6e → L6i | 8 | 38 | West et al. (2006) (cat)
+5 | 21 | West et al. (2006) (rat)
+L2/3e → L4e | 0 | 25 | Thomson, West, et al. (2002) (rat)
+0 | 70 | Thomson, West, et al. (2002) (cat)
+L2/3e → L4i | 1 | 12 | Thomson, West, et al. (2002) (rat)
+7 | 37 | Thomson, West, et al. (2002) (cat)
+L2/3i → L4e | 0 | 29 | Thomson, West, et al. (2002) (rat)
+0 | 10 | Thomson, West, et al. (2002) (cat)
+L2/3e → L5e | 2 | 2 | Thomson, West, et al. (2002) (cat)
+16 | 29 | Thomson, West, et al. (2002) (rat)
+25 | 259 | Thomson and Bannister (1998)
+247 | 1324 | Kampa et al. (2006)
+L2/3e → L6e | 1 | 100 | Zarrinpar and Callaway (2006)*
+L4e → L2/3e | 10 | 50 | Yoshimura et al. (2005)
+7 | 25 | Thomson, West, et al. (2002) (rat)
+7 | 70 | Thomson, West, et al. (2002) (cat)
+64 | 640 | Feldmeyer et al. (2002, 2005)*
+L4e → L2/3i | 1 | 10 | Thomson, West, et al. (2002) (rat)
+3 | 31 | Thomson, West, et al. (2002) (cat)
+L4i → L2/3e | 6 | 12 | Thomson, West, et al. (2002) (rat)
+10 | 37 | Thomson, West, et al. (2002) (cat)
+L4e → L5e | 12 | 86 | Feldmeyer et al. (2005)*
+L5e → L2/3e | 1 | 29 | Thomson, West, et al. (2002)
+3 | 259 | Thomson and Bannister (1998)
+FOOT: Notes: The map incorporates the hit rate estimates from a number of studies. The selection of studies is based on the comprehensive review by Thomson and Lamy (2007) including all data where the hit rate and the number of tested pairs can be extracted such that eq. (3) is applicable. The table lists, from left to right, the connection, the number of existing connections (the product of hit rate and number of tested pairs), the number of tested pairs, and the publication from which the data are extracted. The physiological estimate on the L2/3e to L6e connection is estimated from Zarrinpar and 
+
+####  Table 2 - Amendment candidates for target specificity
+Projection | T | Data source
+L2/3e to L4 | −0.8 | Thomson, West, et al. (2002)
+L5e to L2/3 | −0.4 | Dantzker and Callaway (2000)
+L2/3e to L6 | −0.4 | Zarrinpar and Callaway (2006)
+L6e to L4 | −0.4 | McGuire et al. (1984)
+L2/3e to L5 | 0.29 | Binzegger et al. (2004)
+L4e to L5 | 0.32 | Binzegger et al. (2004)
+L2/3i to L5 | 0.4 | Binzegger et al. (2004)
+L4i to L2/3 | 0.23 | Binzegger et al. (2004)
+FOOT: Notes: The rows describe the projections whose target specificities are modified during the compilation of the integrated connectivity map. For each projection, the second column states the target specificity value T after the amendment, the third the publication on which the modification is based. The top 4 rows are the candidate projections for a preference of inhibitory targets. In these cases, no quantitative estimates are known. T = −0.8 is set if the literature provides a strong indication and T = −0.4 for a comparably weak indication (compare Supplementary Material). The T-values of the
+
+####  Table 3 - Layer-specific external inputs
+External inputs | L2/3 | L4 | L5 | L6
+Thalamic | 0 | 93 | 0 | 47
+Gray matter | 534 | 353 | 389 | 79
+Other white matter | 1072 | 1665 | 1609 | 2790
+Total | 1606 | 2111 | 1997 | 2915
+FOOT: Notes: From top to bottom, the estimated numbers of external inputs per neuron are shown for excitatory neurons in layers 2/3, 4, 5, and 6 for the 3 distinguished input types: Thalamic, gray matter, and other white matter inputs. The total number of external inputs is rounded for simulations (compare Table 4).
+
+####  Table 4 - Model description after Nordlie et al. (2009)
+Model summary
+Populations | Nine; 8 cortical populations and 1 thalamic population
+Topology | —
+Connectivity | Random connections
+Neuron model | Cortex: Leaky integrate-and-fire, fixed voltage threshold, fixed absolute refractory period (voltage clamp), thalamus: Fixed-rate Poisson
+Synapse model | Exponential-shaped postsynaptic currents
+Plasticity | —
+Input | Cortex: Independent fixed-rate Poisson spike trains
+Measurements | Spike activity, membrane potentials
+Populations
+
+Type | Elements
+Cortical network | iaf neurons, 8 populations (2 per layer), type specific size N
+Th | Poisson, 1 population, size Nth
+Connectivity
+
+Type | Random connections with independently chosen pre- and postsynaptic neurons; see Table 5 for probabilities
+Weights | Fixed, drawn from Gaussian distribution
+Delays | Fixed, drawn from Gaussian distribution multiples of computation stepsize
+Neuron and synapse model
+
+Name | iaf neuron
+Type | Leaky integrate-and-fire, exponential-shaped synaptic current inputs
+Subthreshold dynamics | \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}$\displaystyle{{{\rm d}V} \over {{\rm d}t}} = - \displaystyle{V \over {\tau _m }} + \displaystyle{{I(t)} \over {C_m }}\,{\rm if}\,{\rm (}t \gt t^* + \tau _{{\rm ref}} {\rm )}$\end{document}
+V(t) = Vreset else
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}$I_{{\rm syn}} (t) = {\rm we}^{ - t/\tau _{{\rm syn}} } $\end{document}
+Spiking | If \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}$V(t - ) \lt \theta \wedge V(t + ) \ge \theta $\end{document}
+1. set t* = t, 2. emit spike with time stamp t*
+Input
+
+Type | Description
+Background | Independent Poisson spikes to iaf neurons (Table 5)
+Measurements
+
+Spiking activity and membrane potentials from a subset of neurons in every population
+
+####  Table 5 - Parameter specification
+Populations and inputs
+Name | L2/3e | L2/3i | L4e | L4i | L5e | L5i | L6e | L6i | Th
+Population size, N | 20 683 | 5834 | 21 915 | 5479 | 4850 | 1065 | 14 395 | 2948 | 902
+External inputs, kext (reference) | 1600 | 1500 | 2100 | 1900 | 2000 | 1900 | 2900 | 2100 | n/a
+External inputs, kext (layer independent) | 2000 | 1850 | 2000 | 1850 | 2000 | 1850 | 2000 | 1850 | n/a
+Background rate, νbg | 8 Hz
+Connectivity
+
+from
+L2/3e | L2/3i | L4e | L4i | L5e | L5i | L6e | L6i | Th
+to | L2/3e | 0.101 | 0.169 | 0.044 | 0.082 | 0.032 | 0.0 | 0.008 | 0.0 | 0.0
+L2/3i | 0.135 | 0.137 | 0.032 | 0.052 | 0.075 | 0.0 | 0.004 | 0.0 | 0.0
+L4e | 0.008 | 0.006 | 0.050 | 0.135 | 0.007 | 0.0003 | 0.045 | 0.0 | 0.0983
+L4i | 0.069 | 0.003 | 0.079 | 0.160 | 0.003 | 0.0 | 0.106 | 0.0 | 0.0619
+L5e | 0.100 | 0.062 | 0.051 | 0.006 | 0.083 | 0.373 | 0.020 | 0.0 | 0.0
+L5i | 0.055 | 0.027 | 0.026 | 0.002 | 0.060 | 0.316 | 0.009 | 0.0 | 0.0
+L6e | 0.016 | 0.007 | 0.021 | 0.017 | 0.057 | 0.020 | 0.040 | 0.225 | 0.0512
+L6i | 0.036 | 0.001 | 0.003 | 0.001 | 0.028 | 0.008 | 0.066 | 0.144 | 0.0196
+Name | Value | Description
+w ± δw | 87.8 ± 8.8 pA | Excitatory synaptic strengths
+g | –4 | Relative inhibitory synaptic strength
+de ± δde | 1.5 ± 0.75 ms | Excitatory synaptic transmission delays
+di ± δdi | 0.8 ± 0.4 ms | Inhibitory synaptic transmission delays
+Neuron model
+
+Name | Value | Description
+τm | 10 ms | Membrane time constant
+τref | 2 ms | Absolute refractory period
+τsyn | 0.5 ms | Postsynaptic current time constant
+Cm | 250 pF | Membrane capacity
+Vreset | −65 mV | Reset potential
+θ | −50 mV | Fixed firing threshold
+νth | 15 Hz | Thalamic firing rate during input period
+FOOT: The categories refer to the model description in Table 4.
+
+####  Table 6 - Experimentally measured (awake state) and simulated cell-type specific firing rates
+Species | Area | Firing rates (Hz) | Data source
+L2/3e | L4e | L5e | L6e
+Mouse | S1 | 0.61 | — | — | — | Crochet and Petersen (2006)
+Poulet and Petersen (2008)
+Rat | V1 | 0.44 | — | — | — | Greenberg et al. (2008)
+Rat | M1 | 0.36 | — | — | — | Lee et al. (2006)
+Rat | S1 | 0.3 | 1.4 | 2–3 | 0.5 | de Kock and Sakmann (2009)
+Rat | A1 | <1 | — | 3–4 | — | Sakata and Harris (2009)
+Rabbit | Four areas | <1 | — | 4–7 | <1 | Swadlow (1988, 1989, 1991, 1994)
+Model | Reference | 0.86 | 4.45 | 7.59 | 1.09 | Figure 6B
+Model | 100 trials | 1.11 ± 0.8 | 4.8 ± 1.1 | 11 ± 6.1 | 0.56 ± 0.9 | Figure 7C
+FOOT: Notes: Numerical columns show the layer-resolved mean firing rates obtained in in vivo awake animal recordings and in the present modeling study (last row indicates additionally the standard deviation). The investigated areas are S1: primary somatosensory cortex, V1: primary visual cortex, M1: primary motor cortex, A1: primary auditory cortex. The 4 areas investigated in the rabbit by Swadlow (1988, 1989, 1991, 1994) are V1, S1, S2 (secondary somatosensory cortex) and M1, respectively. In these 4 studies, L5 corresponds to cortico-tectal cells that are partly also located in L4. Rat V1 data ar

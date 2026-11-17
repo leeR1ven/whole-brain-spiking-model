@@ -1,0 +1,28 @@
+built in 77 s: 110564 neurons, 10.8 million synapses
+every neuron has a place; share of local synapses inside a cortical patch 0.039
+share of neurons: cortex+hippocampus 19.0 % (human 19), cerebellum 80.1 % (human 80), the rest 0.9 % (human ~1)
+idle, 1000 ms (82 s of computing)
+cortex, Hz by layer (full-size circuit: L23e 1.0 L23i 3.1 L4e 4.5 L4i 5.9 L5e 7.6 L5i 8.7 L6e 1.1 L6i 7.8)
+  A1     0.2   1.3   3.6   5.0   3.9   5.0   0.8   7.1
+  AB     0.2   1.6   3.3   4.9   4.7   5.9   0.9   7.1
+  PB     0.1   0.8   2.8   4.2   3.3   4.9   0.7   7.3
+  M1i    0.2   1.1   3.6   4.8   4.4   5.3   0.9   7.1
+  PMi    0.2   1.6   3.1   5.0   4.9   5.9   0.9   7.3
+  PFi    0.1   1.0   2.7   4.0   3.5   4.8   0.8   7.4
+  V1     0.1   1.1   3.6   5.1   3.7   5.1   0.8   7.3
+  TO     0.2   1.7   3.3   4.7   4.6   5.6   0.8   7.2
+  AT     0.1   0.8   2.8   4.1   3.3   4.3   0.9   7.1
+  M1L    0.2   1.3   3.6   4.8   4.7   5.3   0.8   7.6
+  PML    0.3   1.7   3.2   4.8   4.9   6.5   0.9   7.2
+  PFL    0.1   0.9   2.8   4.1   3.5   4.0   0.8   7.4
+  EC     0.3   2.5   2.7   4.0   5.3   8.0   0.8   7.5
+thalamus relay cells: MGB 0.0 LGN 0.0 VL 0.0 MD 0.0 ; reticular 0.0 Hz
+hippocampus: DGe 0.3 DGi 2.1 CA3e 0.3 CA3i 2.3 CA1e 0.2 CA1i 2.4
+basal ganglia: M1 0.0 M2 0.4 FS 32.5 GA 6.1 GI 53.5 SN 8.6 ST 0.7   (paper: M1, M2 0.01-2; FS 10-20; SN 20-35)
+cerebellum: glom 1.0 goc 22.9 grc 2.8 pc 103.2 bc 41.4 sc 45.5 dcn 22.2   (paper: grc 2.0 goc 22.7 sc 33.9 bc 30.1 pc 58.5 dcn 16.1)
+a 50 ms sound to the ear. Hz in A1.L4e, A1.L23e, AB.L4e, AB.L23e, PB.L4e, PB.L23e, PFi.L23e, V1.L4e
+  before             3.6    0.2    3.2    0.4    2.4    0.1    0.2    3.7   MGB relay 0.0
+  during            20.8    0.4    4.2    0.5    3.3    0.5    0.3    3.4   MGB relay 52.0
+  0-50 ms after     29.2    2.0    3.9    0.5    3.7    0.1    0.2    4.0   MGB relay 26.5
+  50-100 ms after    3.7    0.3    4.2    0.3    3.0    0.1    0.2    3.5   MGB relay 0.0
+total 219 s

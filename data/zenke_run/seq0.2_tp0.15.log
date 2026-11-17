@@ -1,0 +1,43 @@
+t=   60 s  E  9.11 Hz  I 15.47 Hz | E-E w 0.116 (>0.25: 16.2 %) | 63 s
+t=  120 s  E  7.61 Hz  I 12.02 Hz | E-E w 0.113 (>0.25: 17.8 %) | 53 s
+t=  180 s  E  7.12 Hz  I 10.69 Hz | E-E w 0.111 (>0.25: 17.6 %) | 50 s
+t=  240 s  E  6.97 Hz  I 10.16 Hz | E-E w 0.112 (>0.25: 17.5 %) | 48 s
+t=  300 s  E  6.66 Hz  I  9.71 Hz | E-E w 0.112 (>0.25: 17.4 %) | 45 s
+t=  360 s  E  6.66 Hz  I  9.60 Hz | E-E w 0.114 (>0.25: 17.2 %) | 45 s
+t=  420 s  E  6.38 Hz  I  9.27 Hz | E-E w 0.115 (>0.25: 17.1 %) | 43 s
+t=  480 s  E  6.20 Hz  I  9.04 Hz | E-E w 0.116 (>0.25: 17.0 %) | 44 s
+t=  540 s  E  6.41 Hz  I  9.27 Hz | E-E w 0.118 (>0.25: 17.0 %) | 44 s
+t=  600 s  E  6.32 Hz  I  9.15 Hz | E-E w 0.120 (>0.25: 16.9 %) | 43 s
+t=  660 s  E  6.17 Hz  I  9.01 Hz | E-E w 0.121 (>0.25: 16.9 %) | 42 s
+t=  720 s  E  6.47 Hz  I  9.29 Hz | E-E w 0.123 (>0.25: 16.8 %) | 44 s
+t=  780 s  E  6.28 Hz  I  9.07 Hz | E-E w 0.125 (>0.25: 17.0 %) | 42 s
+t=  840 s  E  6.29 Hz  I  9.02 Hz | E-E w 0.128 (>0.25: 17.2 %) | 43 s
+t=  900 s  E  6.13 Hz  I  8.88 Hz | E-E w 0.129 (>0.25: 17.5 %) | 41 s
+t=  960 s  E  6.43 Hz  I  9.11 Hz | E-E w 0.133 (>0.25: 18.2 %) | 45 s
+t= 1020 s  E  6.34 Hz  I  9.02 Hz | E-E w 0.135 (>0.25: 19.1 %) | 47 s
+t= 1080 s  E  6.22 Hz  I  8.88 Hz | E-E w 0.137 (>0.25: 19.9 %) | 45 s
+t= 1140 s  E  6.28 Hz  I  8.96 Hz | E-E w 0.139 (>0.25: 20.7 %) | 44 s
+t= 1200 s  E  6.41 Hz  I  8.99 Hz | E-E w 0.142 (>0.25: 21.5 %) | 44 s
+t= 1260 s  E  6.28 Hz  I  8.97 Hz | E-E w 0.144 (>0.25: 22.1 %) | 44 s
+t= 1320 s  E  6.35 Hz  I  8.99 Hz | E-E w 0.148 (>0.25: 22.7 %) | 43 s
+t= 1380 s  E  6.66 Hz  I  9.16 Hz | E-E w 0.152 (>0.25: 23.3 %) | 47 s
+t= 1440 s  E  6.59 Hz  I  9.17 Hz | E-E w 0.155 (>0.25: 23.8 %) | 45 s
+t= 1500 s  E  6.56 Hz  I  9.10 Hz | E-E w 0.158 (>0.25: 24.2 %) | 44 s
+t= 1560 s  E  6.56 Hz  I  9.11 Hz | E-E w 0.161 (>0.25: 24.6 %) | 45 s
+t= 1620 s  E  6.66 Hz  I  9.16 Hz | E-E w 0.164 (>0.25: 25.0 %) | 46 s
+t= 1680 s  E  6.71 Hz  I  9.32 Hz | E-E w 0.168 (>0.25: 25.4 %) | 46 s
+t= 1740 s  E  6.58 Hz  I  9.17 Hz | E-E w 0.171 (>0.25: 25.7 %) | 47 s
+t= 1800 s  E  6.58 Hz  I  9.15 Hz | E-E w 0.174 (>0.25: 26.0 %) | 45 s
+=== cells coding for circle, square, cross, triangle: 692, 838, 878, 904; for more than one 152
+mean weight from group (row) to group (column); cells coding for exactly one shape; start 0.100:
+  circle    0.590  0.049  0.009  0.010
+  square    0.042  0.694  0.051  0.017
+  cross     0.012  0.007  0.722  0.043
+  triangle  0.067  0.030  0.011  0.761
+to the NEXT group in the order: 0.049 0.051 0.043 0.067   to the PREVIOUS one: 0.010 0.042 0.007 0.011
+no shapes any more, only the usual background; most active group in every second (name + Hz, - = none above 5 Hz):
+  left alone, 40 s                cro11 cro 9 cro 7  -    tri 9 tri10 tri11 tri11 tri11 tri11 tri11 tri12 tri11 tri11 tri11 tri11 tri11 tri11 tri11 tri12 tri12 tri11 tri11 tri11 tri11 tri12 tri11 tri11 tri11 tri11 tri11 tri11 tri12 tri11 tri11 tri11 tri11 tri11 tri11 tri11
+  circle shown 0.2 s, then 20 s   cir 9 tri10 tri11 tri12 tri11 tri11 tri11 tri10 tri10 tri11 tri10 tri10 tri11 tri11 tri11 tri12 tri12 tri12 tri11 tri11
+  square shown 0.2 s, then 20 s   squ16 squ12 squ11 squ10 squ11 squ10 squ 9 squ10 squ10 squ11 squ10 squ10 squ11 squ10 squ 7 squ 8 squ10 squ 9 squ 8  -   
+  cross shown 0.2 s, then 20 s    cro15 cro 6 tri 5 tri10 tri11 tri11 tri12 tri11 tri11 tri11 tri11 tri11 tri12 tri11 tri10 tri12 tri11 tri12 tri12 tri11
+  triangle shown 0.2 s, then 20 s tri19 tri11 tri12 tri12 tri11 tri11 tri12 tri11 tri11 tri11 tri11 tri12 tri11 tri12 tri11 tri11 tri11 tri11 tri11 tri12

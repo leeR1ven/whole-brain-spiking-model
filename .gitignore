@@ -1,0 +1,12 @@
+# compiled / installed packages
+pylib/
+__pycache__/
+*.pyc
+# large result files (weights, spikes, saved states) - regenerate with the run scripts
+*.npz
+*.pkl
+# third-party code, data files and paper full texts - fetch them with tools/fetch_sources.sh
+data/zenke2015_code/
+data/maes2020_code/
+data/zenke2015_fulltext.txt
+data/loh2007_supplement.txt

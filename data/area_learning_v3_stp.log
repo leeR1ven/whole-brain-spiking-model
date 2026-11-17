@@ -1,0 +1,75 @@
+settings {'stp': True, 'a_fast': 0.5, 'exc': {'hom': True}, 'stp_ff': False} | fibres 100 Hz | cells {'L23e': 414, 'L23i': 117, 'L4e': 438, 'L4i': 110, 'L5e': 97, 'L5i': 21, 'L6e': 288, 'L6i': 59}
+before: L23e 1.01 L23i 3.17 L4e 3.92 L4i 6.13 L5e 7.24 L5i 10.79 L6e 1.30 L6i 9.27
+stage 1 t=  62 s | L2/3e: own quarter shown  9.4 Hz, another  1.4, pauses 1.66 | L4e->L2/3e w 0.098 (same quarter 0.106, other 0.090) | L2/3e->L2/3e w 0.113 (same 0.116, other 0.110, >0.25:  0.4 %) | inh w 0.208 | 40 s
+stage 1 t= 121 s | L2/3e: own quarter shown 12.2 Hz, another  1.5, pauses 2.01 | L4e->L2/3e w 0.100 (same quarter 0.110, other 0.089) | L2/3e->L2/3e w 0.111 (same 0.115, other 0.106, >0.25:  0.7 %) | inh w 0.217 | 73 s
+stage 1 t= 181 s | L2/3e: own quarter shown 13.0 Hz, another  1.8, pauses 2.19 | L4e->L2/3e w 0.101 (same quarter 0.114, other 0.088) | L2/3e->L2/3e w 0.110 (same 0.116, other 0.102, >0.25:  1.2 %) | inh w 0.230 | 109 s
+stage 1 t= 241 s | L2/3e: own quarter shown 13.5 Hz, another  1.8, pauses 2.18 | L4e->L2/3e w 0.101 (same quarter 0.116, other 0.086) | L2/3e->L2/3e w 0.108 (same 0.116, other 0.098, >0.25:  1.7 %) | inh w 0.247 | 146 s
+stage 1 t= 302 s | L2/3e: own quarter shown 13.9 Hz, another  1.9, pauses 2.30 | L4e->L2/3e w 0.104 (same quarter 0.121, other 0.086) | L2/3e->L2/3e w 0.107 (same 0.116, other 0.096, >0.25:  2.1 %) | inh w 0.263 | 182 s
+stage 1 t= 360 s | L2/3e: own quarter shown 13.7 Hz, another  1.9, pauses 2.32 | L4e->L2/3e w 0.106 (same quarter 0.124, other 0.086) | L2/3e->L2/3e w 0.106 (same 0.116, other 0.095, >0.25:  2.3 %) | inh w 0.276 | 216 s
+stage 1 t= 429 s | L2/3e: own quarter shown 13.6 Hz, another  2.0, pauses 2.15 | L4e->L2/3e w 0.108 (same quarter 0.128, other 0.086) | L2/3e->L2/3e w 0.105 (same 0.115, other 0.093, >0.25:  2.3 %) | inh w 0.293 | 257 s
+stage 1 t= 480 s | L2/3e: own quarter shown 14.4 Hz, another  2.1, pauses 2.22 | L4e->L2/3e w 0.109 (same quarter 0.130, other 0.086) | L2/3e->L2/3e w 0.105 (same 0.115, other 0.091, >0.25:  2.7 %) | inh w 0.306 | 288 s
+stage 1 t= 540 s | L2/3e: own quarter shown 13.8 Hz, another  2.1, pauses 2.12 | L4e->L2/3e w 0.110 (same quarter 0.132, other 0.086) | L2/3e->L2/3e w 0.104 (same 0.115, other 0.090, >0.25:  3.1 %) | inh w 0.324 | 324 s
+stage 1 t= 606 s | L2/3e: own quarter shown 13.5 Hz, another  2.0, pauses 2.22 | L4e->L2/3e w 0.112 (same quarter 0.135, other 0.087) | L2/3e->L2/3e w 0.103 (same 0.114, other 0.089, >0.25:  3.2 %) | inh w 0.344 | 364 s
+stage 1 t= 661 s | L2/3e: own quarter shown 13.6 Hz, another  2.1, pauses 2.04 | L4e->L2/3e w 0.113 (same quarter 0.138, other 0.087) | L2/3e->L2/3e w 0.102 (same 0.114, other 0.088, >0.25:  3.4 %) | inh w 0.357 | 396 s
+stage 1 t= 720 s | L2/3e: own quarter shown 13.6 Hz, another  2.0, pauses 2.08 | L4e->L2/3e w 0.114 (same quarter 0.139, other 0.087) | L2/3e->L2/3e w 0.101 (same 0.112, other 0.086, >0.25:  3.2 %) | inh w 0.372 | 433 s
+stage 1 t= 782 s | L2/3e: own quarter shown 12.7 Hz, another  2.0, pauses 2.05 | L4e->L2/3e w 0.116 (same quarter 0.142, other 0.087) | L2/3e->L2/3e w 0.100 (same 0.112, other 0.085, >0.25:  3.5 %) | inh w 0.388 | 469 s
+stage 1 t= 842 s | L2/3e: own quarter shown 13.1 Hz, another  2.1, pauses 2.13 | L4e->L2/3e w 0.117 (same quarter 0.144, other 0.087) | L2/3e->L2/3e w 0.098 (same 0.110, other 0.084, >0.25:  3.3 %) | inh w 0.403 | 504 s
+stage 1 t= 901 s | L2/3e: own quarter shown 11.9 Hz, another  2.1, pauses 2.01 | L4e->L2/3e w 0.117 (same quarter 0.145, other 0.087) | L2/3e->L2/3e w 0.097 (same 0.109, other 0.082, >0.25:  3.5 %) | inh w 0.416 | 539 s
+stage 1 t= 960 s | L2/3e: own quarter shown 13.0 Hz, another  2.0, pauses 2.02 | L4e->L2/3e w 0.118 (same quarter 0.147, other 0.086) | L2/3e->L2/3e w 0.096 (same 0.109, other 0.080, >0.25:  3.6 %) | inh w 0.431 | 575 s
+stage 1 t=1021 s | L2/3e: own quarter shown 12.5 Hz, another  2.0, pauses 2.01 | L4e->L2/3e w 0.119 (same quarter 0.148, other 0.086) | L2/3e->L2/3e w 0.094 (same 0.106, other 0.078, >0.25:  3.6 %) | inh w 0.446 | 611 s
+stage 1 t=1083 s | L2/3e: own quarter shown 12.2 Hz, another  2.0, pauses 1.98 | L4e->L2/3e w 0.120 (same quarter 0.151, other 0.087) | L2/3e->L2/3e w 0.093 (same 0.106, other 0.077, >0.25:  3.7 %) | inh w 0.460 | 648 s
+stage 1 t=1141 s | L2/3e: own quarter shown 11.9 Hz, another  2.0, pauses 2.05 | L4e->L2/3e w 0.120 (same quarter 0.151, other 0.086) | L2/3e->L2/3e w 0.091 (same 0.104, other 0.075, >0.25:  3.6 %) | inh w 0.474 | 684 s
+stage 1 t=1200 s | L2/3e: own quarter shown 12.0 Hz, another  2.0, pauses 1.95 | L4e->L2/3e w 0.122 (same quarter 0.153, other 0.087) | L2/3e->L2/3e w 0.091 (same 0.104, other 0.075, >0.25:  3.5 %) | inh w 0.486 | 719 s
+stage 1 t=1263 s | L2/3e: own quarter shown 11.2 Hz, another  2.0, pauses 1.93 | L4e->L2/3e w 0.123 (same quarter 0.154, other 0.088) | L2/3e->L2/3e w 0.089 (same 0.102, other 0.074, >0.25:  3.4 %) | inh w 0.498 | 756 s
+stage 1 t=1324 s | L2/3e: own quarter shown 11.0 Hz, another  2.1, pauses 1.90 | L4e->L2/3e w 0.123 (same quarter 0.155, other 0.087) | L2/3e->L2/3e w 0.088 (same 0.101, other 0.073, >0.25:  3.5 %) | inh w 0.511 | 793 s
+stage 1 t=1381 s | L2/3e: own quarter shown 11.0 Hz, another  2.0, pauses 1.89 | L4e->L2/3e w 0.124 (same quarter 0.156, other 0.088) | L2/3e->L2/3e w 0.087 (same 0.100, other 0.072, >0.25:  3.5 %) | inh w 0.523 | 827 s
+stage 1 t=1443 s | L2/3e: own quarter shown 10.9 Hz, another  2.1, pauses 1.87 | L4e->L2/3e w 0.124 (same quarter 0.158, other 0.087) | L2/3e->L2/3e w 0.086 (same 0.099, other 0.071, >0.25:  3.4 %) | inh w 0.536 | 863 s
+stage 1 t=1502 s | L2/3e: own quarter shown 11.4 Hz, another  1.9, pauses 1.88 | L4e->L2/3e w 0.126 (same quarter 0.160, other 0.087) | L2/3e->L2/3e w 0.086 (same 0.099, other 0.070, >0.25:  3.5 %) | inh w 0.546 | 898 s
+stage 1 t=1561 s | L2/3e: own quarter shown 11.1 Hz, another  1.9, pauses 1.86 | L4e->L2/3e w 0.126 (same quarter 0.160, other 0.087) | L2/3e->L2/3e w 0.084 (same 0.097, other 0.068, >0.25:  3.4 %) | inh w 0.559 | 933 s
+stage 1 t=1624 s | L2/3e: own quarter shown 11.0 Hz, another  1.9, pauses 1.89 | L4e->L2/3e w 0.126 (same quarter 0.161, other 0.087) | L2/3e->L2/3e w 0.083 (same 0.096, other 0.067, >0.25:  3.5 %) | inh w 0.571 | 969 s
+stage 1 t=1681 s | L2/3e: own quarter shown 10.6 Hz, another  1.9, pauses 1.88 | L4e->L2/3e w 0.127 (same quarter 0.163, other 0.087) | L2/3e->L2/3e w 0.082 (same 0.095, other 0.066, >0.25:  3.5 %) | inh w 0.579 | 1002 s
+stage 1 t=1741 s | L2/3e: own quarter shown 10.5 Hz, another  2.0, pauses 1.91 | L4e->L2/3e w 0.128 (same quarter 0.163, other 0.087) | L2/3e->L2/3e w 0.081 (same 0.094, other 0.065, >0.25:  3.5 %) | inh w 0.589 | 1037 s
+stage 1 t=1804 s | L2/3e: own quarter shown 10.4 Hz, another  2.1, pauses 1.86 | L4e->L2/3e w 0.128 (same quarter 0.165, other 0.087) | L2/3e->L2/3e w 0.080 (same 0.093, other 0.064, >0.25:  3.4 %) | inh w 0.602 | 1074 s
+=== after stage 1 (last 300 s). L2/3e cells coding for each input (rate > 10 Hz while it is shown): 65, 69, 75, 81; for none 124 of 414; for more than one 0
+  of the coding cells, share lying in the shown quarter: 75 %, 67 %, 79 %, 64 %
+  mean rate of each group (rows) while each input is shown (columns), Hz:
+  group 0    19.2    0.1    0.1    1.0
+  group 1     0.1   19.5    0.7    0.1
+  group 2     0.1    0.9   20.5    0.1
+  group 3     1.7    0.2    0.2   18.0
+  mean L2/3e -> L2/3e weight from group (row) to group (column), cells coding for exactly one input; last = none; start 0.100:
+  group 0   0.174  0.020  0.019  0.015  0.133
+  group 1   0.027  0.164  0.021  0.013  0.124
+  group 2   0.025  0.029  0.158  0.011  0.126
+  group 3   0.036  0.023  0.022  0.117  0.140
+  none      0.037  0.031  0.036  0.028  0.095
+  activity (Hz) of each group in the pauses (from 1 s after switch-off to the next input; pauses > 2 s); rows = input shown before:
+            group 0  group 1  group 2  group 3     none   pauses   own group > 10 Hz
+  input 0       2.0      1.2      1.6      2.4      1.9       5       0 %
+  input 1       2.2      1.2      1.5      2.5      1.9      11       0 %
+  input 2       1.9      1.2      1.7      2.4      1.9      10       0 %
+  input 3       2.1      1.3      1.5      2.5      1.9      13       0 %
+stage 2 t=  74 s | L2/3e: own quarter shown 11.6 Hz, another  1.9, pauses 1.87 | L4e->L2/3e w 0.133 (same quarter 0.170, other 0.091) | L2/3e->L2/3e w 0.082 (same 0.096, other 0.066, >0.25:  3.6 %) | inh w 0.608 | 1114 s
+stage 2 t= 120 s | L2/3e: own quarter shown 11.1 Hz, another  2.0, pauses 2.03 | L4e->L2/3e w 0.135 (same quarter 0.172, other 0.093) | L2/3e->L2/3e w 0.083 (same 0.096, other 0.066, >0.25:  3.6 %) | inh w 0.613 | 1138 s
+stage 2 t= 182 s | L2/3e: own quarter shown  9.9 Hz, another  1.9, pauses 2.11 | L4e->L2/3e w 0.137 (same quarter 0.174, other 0.095) | L2/3e->L2/3e w 0.084 (same 0.097, other 0.067, >0.25:  3.7 %) | inh w 0.619 | 1170 s
+stage 2 t= 254 s | L2/3e: own quarter shown 10.3 Hz, another  2.1, pauses 2.10 | L4e->L2/3e w 0.141 (same quarter 0.178, other 0.098) | L2/3e->L2/3e w 0.085 (same 0.099, other 0.068, >0.25:  3.9 %) | inh w 0.627 | 1208 s
+stage 2 t= 301 s | L2/3e: own quarter shown 11.8 Hz, another  2.0, pauses 2.19 | L4e->L2/3e w 0.142 (same quarter 0.179, other 0.099) | L2/3e->L2/3e w 0.086 (same 0.100, other 0.069, >0.25:  4.0 %) | inh w 0.633 | 1232 s
+stage 2 t= 366 s | L2/3e: own quarter shown 10.9 Hz, another  1.9, pauses 2.25 | L4e->L2/3e w 0.144 (same quarter 0.182, other 0.101) | L2/3e->L2/3e w 0.087 (same 0.101, other 0.069, >0.25:  4.2 %) | inh w 0.641 | 1267 s
+stage 2 t= 422 s | L2/3e: own quarter shown 10.0 Hz, another  2.2, pauses 2.37 | L4e->L2/3e w 0.146 (same quarter 0.183, other 0.102) | L2/3e->L2/3e w 0.087 (same 0.102, other 0.070, >0.25:  4.4 %) | inh w 0.648 | 1297 s
+stage 2 t= 486 s | L2/3e: own quarter shown 11.1 Hz, another  2.1, pauses 2.43 | L4e->L2/3e w 0.148 (same quarter 0.186, other 0.104) | L2/3e->L2/3e w 0.088 (same 0.103, other 0.071, >0.25:  4.5 %) | inh w 0.656 | 1333 s
+stage 2 t= 562 s | L2/3e: own quarter shown 12.4 Hz, another  2.1, pauses 2.30 | L4e->L2/3e w 0.151 (same quarter 0.189, other 0.106) | L2/3e->L2/3e w 0.090 (same 0.105, other 0.072, >0.25:  4.7 %) | inh w 0.666 | 1374 s
+stage 2 t= 603 s | L2/3e: own quarter shown 11.4 Hz, another  2.2, pauses 2.33 | L4e->L2/3e w 0.152 (same quarter 0.191, other 0.108) | L2/3e->L2/3e w 0.091 (same 0.106, other 0.072, >0.25:  4.9 %) | inh w 0.672 | 1396 s
+=== stage 2 (0.2 s inputs, ~5 s pauses), groups as found after stage 1
+  activity (Hz) of each group in the pauses (from 1 s after switch-off to the next input; pauses > 2 s); rows = input shown before:
+            group 0  group 1  group 2  group 3     none   pauses   own group > 10 Hz
+  input 0       2.3      1.3      1.7      3.0      2.3      23       0 %
+  input 1       2.3      1.3      1.7      3.0      2.3      20       0 %
+  input 2       2.2      1.4      1.7      3.0      2.3      19       0 %
+  input 3       2.4      1.5      1.8      2.9      2.4      11       0 %
+=== learning off. Each input shown 0.5 s, then ALL background input of the area cut for 3 s: Hz of each group (and of the other cells) in seconds 1-3 after the cut
+  input 0:    0.0    0.0    0.0    0.0 |    0.0
+  input 1:    0.0    0.0    0.0    0.0 |    0.0
+  input 2:    0.0    0.0    0.0    0.0 |    0.0
+  input 3:    0.0    0.0    0.0    0.0 |    0.0
+at rest afterwards (learning off, 10 s): L23e 2.30 L23i 4.42 L4e 3.14 L4i 6.14 L5e 6.89 L5i 10.99 L6e 1.03 L6i 9.57
+total 1411 s

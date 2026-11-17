@@ -1,0 +1,263 @@
+11 tables
+
+####  Table 1. - Network and connection parameters
+Name | Value | Description
+Nnetwork | 80,000 | Network size
+NnetworkMSND1 | 37,971 | Size of MSN D1 population
+NnetworkMSND2 | 37,971 | Size of MSN D2 population
+NnetworkFSN | 1599 | Size of FSN population
+NnetworkSTN | 388 | Size of STN population
+NnetworkGPeTA | 329 | Size of GPe TA population
+NnetworkGPeTI | 988 | Size of GPe TI population
+NnetworkSNr | 754 | Size of SNr population
+vCTX−MSND1 | 448/546 Hz | Cortical input to MSN D1 (slow-wave/activation)
+vCTX−MSND2 | 592/722 Hz | Cortical input to MSN D2 (slow-wave/activation)
+vCTX−FSN | 646/787 Hz | Cortical input to FSN (slow-wave/activation)
+vCTX−STN | 170/250 Hz | Cortical input to in STN (slow-wave/activation)
+vEXT−GPeTA | 100/200 Hz | External input to GPe TA (slow-wave/activation)
+vEXT−GPeTI | 720/1530 Hz | External input to GPe TI (slow-wave/activation)
+vEXT−SNr | 1800/1800 Hz | External input to SNr (slow-wave/activation)
+aCTX−MSND1 | 0.11 | Amplitude oscillations MSN D1 (both states)
+aCTX−MSND2 | 0.11 | Amplitude oscillations MSN D2 (both states)
+aCTX−FSN | 0.11 | Amplitude oscillations FSN (both states)
+aCTX−STN | 0.11/0.35 | Amplitude oscillations STN (slow-wave/activation)
+Nfan inMSND1−MSND1 | 364 | Number of MSN D1 connections on each MSN D1
+Nfan inMSND1−MSND2 | 84 | Number of MSN D1 connections on each MSN D2
+Nfan inMSND2−MSND1 | 392 | Number of MSN D2 connections on each MSN D1
+Nfan inMSND2−MSND2 | 504 | Number of MSN D2 connections on each MSN D2
+Nfan inFSN−MSND1 | 16 | Number of FSN connections on each MSN neuron
+Nfan inFSN−MSND2 | 11 | Number of FSN connections on each MSN neuron
+Nfan inGPeTA−MSN | 10 | Number of GPe TA connections on each MSN neuron
+Nfan inFSN−FSN | 10 | Number of FSN connections on each FSN neuron
+Nfan inGPeTA−FSN | 10 | Number of GPe TA connections on each FSN neuron
+Nfan inGPeTI−FSN | 10 | Number of GPe TI connections on each FSN neuron
+Nfan inGPeTI−SNr | 32 | Number of GPe connections on each SNr neuron
+Nfan inMSND1−SNr | 500 | Number of MSN D1 connections on each SNr neuron
+Nfan inSTN−SNr | 30 | Number of STN connections on each SNr neuron
+Nfan inMSND2−GPeTI | 500 | Number of MSN D2 connections on each GPe TI neuron
+Nfan inSTN−GPe | 30 | Number of STN connections on each GPe neuron
+Nfan inGPeTA−GPeTA | 5 | Number of GPe TA reciprocal connections
+Nfan inGPeTA−GPeTI | 5 | Number of GPe TA connections on each GPe TI
+Nfan inGPeTI−GPeTA | 25 | Number of GPe TI connections on each GPe TA
+Nfan inGPeTI−GPeTI | 25 | Number of GPe TI reciprocal connections
+Nfan inGPeTI−STN | 30 | Number of GPe TI connections on each STN neuron
+
+####  Table 2. - FSN model parameters (quadratic integrate and fire model)
+Name | Value | Description
+a | 0.2 s | Recovery current time constant
+b | 0.025 | Voltage dependency of recovery current
+c | –60 mV | Spike reset
+C | 80 pF | Membrane capacitance
+d | 0 pA | Summed recovery current contribution following an action potential
+k | 1 | Steady-state voltage dependence
+βvr | –0.078 | Magnitude of dopamine effect on resting potential vt
+vb | –55 mV | Voltage dependence recovery current
+vpeak | 25 mV | Spike cutoff
+vr | –64.4 mV | Resting potential
+vth | –50 mV | Threshold potential
+
+####  Table 3. - GPe neuron parameters (adaptive exponential integrate and fire model)
+Name | Value | Description
+a | 2.5 nS | Subthreshold adaptation
+bTI | 70 pA | Spike-triggered adaptation TI neurons
+bTA | 105 pA | Spike-triggered adaptation TA neurons
+βEL | –0.181 | Magnitude of D1 effect on resting potential EL
+CTI | 40 pF | Membrane capacitance TI neurons
+CTA | 60 pF | Membrane capacitance TA neurons
+ΔTTI | 1.7 ms | Slope factor of spike upstroke TI neurons
+ΔTTA | 2.55 ms | Slope factor of spike upstroke TA neurons
+EL | –55.1 mV | Leak reversal potential
+gL | 1 nS | Leak conductance
+Ie–TA | 1 pA | Iinj to obtain in vitro firing rate 8 Hz without synaptic input
+Ie–TI | 12 pA | Iinj to obtain in vitro firing rate 18 Hz without synaptic input
+τw | 20 ms | Adaptation time constant
+tf | 15 mV | Spike cut off
+Vr | –60 mV | Spike reset
+VT | –54.7 mV | Threshold potential
+
+####  Table 4. - MSN D1 and MSN D2 model parameters (quadratic integrate and fire model)
+Name | Value | Description
+a | 0.01 s | Recovery current time constant
+α | 0.032 | Magnitude of D2 effect on k
+b | –20 | Voltage dependency of recovery current
+c | –60 mV | Spike reset
+C | 15.2 pF | Membrane capacitance
+dMSND1 | 66.9 pA | Spike-triggered adaptation MSN D1
+dMSND2 | 91 pA | Spike-triggered adaptation MSN D2
+k | 1 | Steady-state voltage dependence
+βvrMSND1 | 0.0296 | Magnitude of D1 effect on threshold potential vt
+βdMSND1 | –0.450 | Magnitude of D1 effect on recovery current contribution d
+vpeak | 40 mV | Spike cutoff
+vrMSND1 | –78.2 mV | Resting potential MSN D1
+vrMSND2 | –80 mV | Resting potential MSN D2
+vth | –29.7 mV | Threshold potential
+
+####  Table 5. - SNr neuron model parameters (adaptive exponential integrate and fire model)
+Name | Value | Description
+a | 3 nS | Subthreshold adaptation
+b | 200 pA | Spike-triggered adaptation
+βEL | –0.0896 | Magnitude of D1 effect on resting potential EL
+C | 80 pF | Membrane capacitance
+ΔT | 1.8 ms | Slope factor of spike upstroke
+EL | –55.8 mV | Leak reversal potential
+gL | 3 nS | Leak conductance
+Ie | 15 pA | Iinj to obtain in vitro firing rate without synaptic input
+τw | 20 ms | Adaptation time constant
+tf | 20 mV | Spike cut off
+Vr | –65mV | Spike reset
+VT | –55.2 mV | Threshold potential
+
+####  Table 6. - STN neuron parameters (adaptive exponential integrate and fire model)
+Name | Value | Description
+a | 0.3 nS | Subthreshold adaptation (below –70) otherwise equal to 0
+b | 0.05 pA | Spike-triggered adaptation
+C | 60 pF | Membrane capacitance
+ΔT | 16.2 ms | Slope factor of spike upstroke
+EL | –80.2 mV | Leak reversal potential
+gL | 10 nS | Leak conductance
+Ie | 5 pA | Iinj to obtain in vitro firing rate without synaptic input
+τw | 333 ms | Adaptation time constant
+tf | 15 mV | Spike cut off
+Vr | –70 mV | Spike reset
+VT | –64.0 mV | Threshold potential
+
+####  Table 7. - Basic synaptic model parameters
+Name | Value | Source
+τampaCTX−FSN | 12 ms | n.d., set as for CTX-MSN
+gampaCTX−FSN | 0.5 nS | n.d., set as for CTX-MSN
+tdelayCTX−FSN | 2.5 ms | Jaeger and Kita, 2011
+ErevCTX−FSN | 0 mV | n.d., set as for CTX-MSN
+τgabaFSN−FSN | 6 ms | Gittis et al., 2010
+ggabaFSN−FSN | 1 nS | Several times weaker than FSN-MSN (Gittis et al., 2010)
+tdelayFSN−FSN | 1.7 ms | n.d., same as FSN-MSN
+ErevFSN−FSN | –74 mV | n.d., same as MSN-MSN
+τgabaGPeTI−FSN | 17 ms | Saunders et al., 2016
+ggabaGPeTI−FSN | 2 nS | n.d., estimated
+τgabaGPeTA−FSN | 66 ms | Glajch et al., 2016
+ggabaGPeTA−FSN | 0.51 nS | n.d., estimated
+tdelayGPe−FSN | 7.0 ms | n.d., same as MSN-GPe Park et al., 1982
+ErevGPe−FSN | –74 mV | n.d., same as MSN-MSN
+τampaEXT−GPe | 5 ms | n.d.
+ggabaEXT−GPe | 0.5 nS | n.d.
+tdelayEXT−GPe | 5 ms | n.d.
+ErevEXT−GPe | 0 mV | n.d.
+τgabaGPe−GPe | 5 ms | Shen et al., 2008
+ggabaGPe−GPeTI | 1.3 nS | Lindahl et al., 2013
+ggabaGPe−GPeTA | 0.33 nS | 25% of GPe-GPe TI
+tdelayGPe−GPe | 1 ms | n.d.
+ErevGPe−GPe | –65 mV | n.d., assumed as for MSN D2-GPe
+τgabaMSND2−GPe | 6 ms | Shen et al., 2008
+ggabaMSND2−GPe | 2 nS | Constrained by Shen et al., 2008
+tdelayMSND2−GPe | 7 ms | Park et al., 1982
+ErevMSND2−GPe | –65 mV | Rav-Acha et al., 2005
+τampaSTN−GPeTI | 12 ms | Hanson and Jaeger, 2002
+gampaSTN−GPeTI | 0.35 nS | Lindahl et al., 2013
+gampaSTN−GPeTA | 0.11 nS | 30% of STN-GPe TI
+tdelaySTN−GPeTI | 2 ms | Jaeger and Kita, 2011
+ErevSTN−GPeTI | 0 mV | n.d.
+τampaCTX−MSN | 12 ms | Ellender et al., 2011
+gampaCTX−MSND1 | 0.5 nS | Humphries et al., 2009a,b; Ellender et al., 2011
+gampaCTX−MSND2 | 0.5 nS | Humphries et al., 2009a,b; Ellender et al., 2011
+τnmdaCTX−MSN | 160 ms | Humphries et al., 2009a,b; Ellender et al., 2011
+gnmdaCTX−MSND1 | 0.11 nS | Humphries et al., 2009a,b; Ellender et al., 2011
+gnmdaCTX−MSND2 | 0.019 nS | Humphries et al., 2009a,b; Ellender et al., 2011
+tdelayCTX−MSN | 2.5 ms | Jaeger and Kita, 2011
+ErevCTX−MSN | 0 mV | Humphries et al., 2009a
+τgabaMSN−MSN | 8 ms | Gittis et al., 2010
+ggabaMSND1−MSND1 | 0.15 nS | Constrained by Koos et al., 2004; Taverna et al., 2004, 2008
+ggabaMSND1−MSND2 | 0.375 nS | Constrained by Koos et al., 2004; Taverna et al., 2004, 2008
+ggabaMSND2−MSND1 | 0.45 nS | Constrained by Koos et al., 2004; Taverna et al., 2004, 2008
+ggabaMSND2−MSND2 | 0.35 nS | Constrained by Koos et al., 2004; Taverna et al., 2004, 2008
+tdelayMSN−MSN | 1.7 ms | Taverna et al., 2004
+ErevMSN−MSN | –74 mV | Koos et al., 2004
+τgabaFSN−MSN | 11 ms | Koos et al., 2004
+ggabaFSN−MSN | 6 nS | Taverna et al., 2004
+tdelayFSN−MSN | 1.7 ms | n.d., assumed as for MSN
+ErevFSN−MSN | –74 mV | Koós and Tepper, 1999
+τgabaGPeTA−MSND1 | 87 ms | Glajch et al., 2016
+τgabaGPeTA−MSND2 | 76 ms | Glajch et al., 2016
+ggabaGPe−MSND1 | 0.04 nS | n.d., estimated
+ggabaGPe−MSND2 | 0.08 nS | Twice as TA-MSN D1 (Glajch et al., 2016)
+tdelayGPe−MSN | 7.0 ms | n.d., set as for MSN-GPe (Park et al., 1982)
+EgabaGPe−MSN | –74 mV | n.d., set as for MSN and FSN synapses
+τampaEXT−SNr | 5 ms | n.d.
+gampaEXT−SNr | 0.5 nS | n.d.
+tdelayEXT−SNr | 5 ms | n.d.
+ErevEXT−SNr | 0 mV | n.d.
+τgabaMSND1−SNr | 5.2 ms | Connelly et al., 2010
+ggabaMSND1−SNr | 2 nS | Constrained by Connelly et al., 2010
+tdelayMSND1−SNr | 7 ms | Connelly et al., 2010
+ErevMSND1−SNr | –80 mV | Connelly et al., 2010
+τgabaGPe−SNr | 2.1 ms | Connelly et al., 2010
+ggabaGPe−SNr | 76 nS | Connelly et al., 2010
+tdelayGPe−SNr | 3 ms | Nakanishi et al., 1991
+ErevGPe−SNr | –72 mV | Connelly et al., 2010
+τampaSTN−SNr | 12 ms | n.d., assume as for STN-GPe (Hanson and Jaeger, 2002)
+gampaSTN−SNr | 0.91 nS | Lindahl et al., 2013
+tdelaySTN−SNr | 4.5 ms | Shen and Johnson, 2006; Ammari et al., 2010
+ErevSTN−SNr | 0 mV | n.d.
+τampaCTX−STN | 4 ms | Baufreton et al., 2005
+gampaCTX−STN | 0.25 nS | n.d.
+τnmdaCTX−STN | 160 ms | Same as for MSN
+gnmdaCTX−STN | 0.00625 nS | Same AMPA-NMDA ratio as for MSN
+tdelayCTX−STN | 2.5 ms | Fujimoto and Kita, 1993; Jaeger and Kita, 2011
+ErevCTX−STN | 0 mV | n.d.
+τgabaGPe−STN | 8 ms | Baufreton et al., 2005
+ggabaGPeTI−STN | 0.08 nS | Lindahl et al., 2013
+tdelayGPe−STN | 1 ms | Jaeger and Kita, 2011
+ErevGPe−STN | –84 mV | Baufreton et al., 2009
+
+####  Table 8. - Parameters for facilitating and depressing Tsodyks synapse models
+Synapse | U | τrec | τfac | Source
+FSN − MSN | 0.29 | 902 ms | 53 ms | Planert et al., 2010
+FSN − FSN | 0.29 | 902 ms | 53 ms | Gittis et al., 2010; Planert et al., 2010
+GPe − SNr | 0.196 | 969 ms | 0 ms | Lindahl et al., 2013
+MSND1 − SNr | 0.0192 | 623 ms | 559 ms | Lindahl et al., 2013
+MSND2 − SNr | 0.24 | 11 ms | 73 ms | Lindahl et al., 2013
+STN − SNr | 0.35 | 800 ms | 0 ms | Lindahl et al., 2013
+GPeTA − FSN | 0.29 | 902 ms | 53 ms | n.d., assumed same as FSN − MSN
+GPeTI − FSN | 0.29 | 902 ms | 53 ms | n.d., assumed same as FSN − MSN
+
+####  Table 9. - Synaptic dopamine parameters
+Name | Value | Source
+βIGABAFSN−FSN | –1.27 | Humphries et al., 2009a
+βIGABAGPe−FSN | –0.53 | Glajch et al., 2016
+βIGABAGPe−GPe | –0.83 | Miguelez et al., 2012
+βIGABAMSND2−GPeTI | –0.83 | Chuhma et al., 2011
+βIAMPASTN−GPe | –0.45 | Hernández et al., 2006
+βINMDACTX−MSND1 | 1.04 | Humphries et al., 2009b
+βIAMPACTX−MSND2 | –0.26 | Humphries et al., 2009b
+βNfan inFSN−MSND2 | –0.90 | Gittis et al., 2011
+βIGABAMSN−MSN | 0.88 | Taverna et al., 2008
+βNfan inMSN−MSN | 0.88 | Taverna et al., 2008
+βIGABAGPeTA−MSND1 | –1.22 | Glajch et al., 2016
+βIGABAGPeTA−MSND1 | –1.15 | Glajch et al., 2016
+βIGABAMSND1−SNr | 0.56 | Chuhma et al., 2011
+βIAMPACTX−STN | –0.45 | Shen and Johnson, 2000
+βIGABAGPe−STN | –0.24 | Baufreton and Bevan, 2008
+
+####  Table 10. - Effect of connection on synchrony (+, increase; –, decrease, 0, no change), oscillations (+/–/0), and action selection
+Connection | Scaling | TA | TI | SNr | STN | Action selection
+TA-MSN D2 | 0 | +/0 | +/0 | +/0 | 0/0 | Worse
+TA-MSN D2 | 5 | +/+ | +/+ | +/+ | 0/0 | Improved
+TI-TI | 0 | 0/+ | –/+ | 0/+ | –/+ | None
+TI- TI | 5 | +/0 | +/0 | +/0 | 0/0 | None
+TI-STN | 5 | +/0 | +/0 | +/0 | –/0 | None
+MSN D2-TI | 0 | +/+ | +/0 | +/0 | –/0 | Improved
+MSN D2-TI | 5 | +/0 | +/0 | +/0 | 0/0 | Worse
+MSN D2-MSN D2 | 5 | 0/0 | +/0 | 0/0 | –/0 | Improved
+STN-TA | 0 | +/+ | 0/0 | 0/0 | 0/0 | None
+STN-TA | 5 | +/0 | +/0 | +/0 | –/0 | Worse
+STN-TI | 0 | +/0 | +/0 | +/0 | 0/0 | Worse
+
+####  Table 11. - Effect of nucleus firing rate on synchrony (+, increase; –, decrease; 0, no change), oscillations (+/–/0), and action selection
+Nucleus | Firing rate | TA | TI | SNr | STN | Action selection
+FSN | Increase | +/0 | +/0 | +/+ | –/0 | Improved
+TA | Increase | +/+ | +/+ | +/+ | –/– | Worse
+TI | Silent | +/+ | +/+ | +/0 | –/0 | Worse
+TI | Increase | +/+ | –/0 | +/+ | –/– | Improved
+MSN D1 | Increase | 0/0 | 0/0 | +/+ | 0/0 | Improved
+MSN D2 | Silent | +/+ | +/+ | +/+ | –/– | Improved
+MSN D2 | Increase | +/+ | +/+ | +/+ | –/– | Worse
+STN | Silent | +/+ | +/+ | +/+ | +/+ | Worse
+STN | Increase | +/0 | +/+ | +/0 | +/+ | Improved

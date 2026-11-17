@@ -1,0 +1,11 @@
+built: 77169 neurons, 299.7 million synapses, 136 s
+scale 1.000, synapses per neuron x 1.00, 1000 ms:
+  L23e    0.99 Hz   published 0.86
+  L23i    3.03 Hz
+  L4e     4.48 Hz   published 4.45
+  L4i     5.91 Hz
+  L5e     7.49 Hz   published 7.59
+  L5i     8.70 Hz
+  L6e     1.10 Hz   published 1.09
+  L6i     7.80 Hz
+total 220 s

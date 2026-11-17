@@ -1,0 +1,95 @@
+--- stage 1 (init): 1800 s, {'on': 1.0, 'off': 2.0, 'scale': 25.0}, sliding threshold off
+t=   60 s  E  7.67 Hz  I 13.06 Hz | E-E w 0.086 (ref 0.003, >0.25: 12.9 %)  in-E w 0.280  I-E w 0.216 | 81 s
+t=  120 s  E  8.34 Hz  I 11.19 Hz | E-E w 0.099 (ref 0.007, >0.25: 17.9 %)  in-E w 0.214  I-E w 0.236 | 83 s
+t=  180 s  E  6.72 Hz  I  9.17 Hz | E-E w 0.105 (ref 0.011, >0.25: 18.3 %)  in-E w 0.183  I-E w 0.246 | 69 s
+t=  240 s  E  6.48 Hz  I  8.31 Hz | E-E w 0.112 (ref 0.015, >0.25: 19.8 %)  in-E w 0.177  I-E w 0.255 | 67 s
+t=  300 s  E  7.83 Hz  I 10.24 Hz | E-E w 0.121 (ref 0.019, >0.25: 20.1 %)  in-E w 0.183  I-E w 0.269 | 76 s
+t=  360 s  E  7.44 Hz  I 10.25 Hz | E-E w 0.124 (ref 0.022, >0.25: 20.1 %)  in-E w 0.188  I-E w 0.282 | 74 s
+t=  420 s  E  7.77 Hz  I 10.23 Hz | E-E w 0.132 (ref 0.026, >0.25: 19.9 %)  in-E w 0.194  I-E w 0.298 | 76 s
+t=  480 s  E  5.98 Hz  I  8.93 Hz | E-E w 0.134 (ref 0.029, >0.25: 19.9 %)  in-E w 0.199  I-E w 0.305 | 59 s
+t=  540 s  E  6.66 Hz  I  9.34 Hz | E-E w 0.138 (ref 0.033, >0.25: 19.9 %)  in-E w 0.201  I-E w 0.314 | 68 s
+t=  600 s  E  5.62 Hz  I  8.55 Hz | E-E w 0.138 (ref 0.036, >0.25: 19.9 %)  in-E w 0.207  I-E w 0.320 | 61 s
+t=  660 s  E  6.82 Hz  I  8.92 Hz | E-E w 0.130 (ref 0.039, >0.25: 20.1 %)  in-E w 0.205  I-E w 0.328 | 74 s
+t=  720 s  E  9.02 Hz  I 11.39 Hz | E-E w 0.140 (ref 0.042, >0.25: 20.2 %)  in-E w 0.213  I-E w 0.351 | 84 s
+t=  780 s  E  7.40 Hz  I 10.77 Hz | E-E w 0.147 (ref 0.046, >0.25: 20.2 %)  in-E w 0.220  I-E w 0.366 | 70 s
+t=  840 s  E  6.58 Hz  I  9.98 Hz | E-E w 0.148 (ref 0.049, >0.25: 20.1 %)  in-E w 0.230  I-E w 0.376 | 68 s
+t=  900 s  E  5.09 Hz  I  8.03 Hz | E-E w 0.146 (ref 0.052, >0.25: 20.1 %)  in-E w 0.230  I-E w 0.379 | 54 s
+t=  960 s  E  6.20 Hz  I  8.96 Hz | E-E w 0.149 (ref 0.056, >0.25: 20.2 %)  in-E w 0.232  I-E w 0.386 | 63 s
+t= 1020 s  E  7.01 Hz  I 10.40 Hz | E-E w 0.153 (ref 0.059, >0.25: 20.3 %)  in-E w 0.235  I-E w 0.398 | 70 s
+t= 1080 s  E  5.34 Hz  I  8.60 Hz | E-E w 0.152 (ref 0.062, >0.25: 20.5 %)  in-E w 0.231  I-E w 0.403 | 58 s
+t= 1140 s  E  5.06 Hz  I  7.50 Hz | E-E w 0.150 (ref 0.066, >0.25: 20.4 %)  in-E w 0.230  I-E w 0.406 | 57 s
+t= 1200 s  E  5.55 Hz  I  7.99 Hz | E-E w 0.155 (ref 0.069, >0.25: 20.6 %)  in-E w 0.233  I-E w 0.410 | 57 s
+t= 1260 s  E  5.88 Hz  I  8.25 Hz | E-E w 0.160 (ref 0.072, >0.25: 20.7 %)  in-E w 0.232  I-E w 0.415 | 60 s
+t= 1320 s  E  7.02 Hz  I  9.24 Hz | E-E w 0.166 (ref 0.076, >0.25: 21.2 %)  in-E w 0.239  I-E w 0.425 | 69 s
+t= 1380 s  E  6.46 Hz  I  9.43 Hz | E-E w 0.169 (ref 0.079, >0.25: 21.4 %)  in-E w 0.242  I-E w 0.434 | 66 s
+t= 1440 s  E  7.40 Hz  I 10.51 Hz | E-E w 0.178 (ref 0.083, >0.25: 22.0 %)  in-E w 0.240  I-E w 0.447 | 68 s
+t= 1500 s  E  7.36 Hz  I 10.57 Hz | E-E w 0.184 (ref 0.087, >0.25: 22.5 %)  in-E w 0.248  I-E w 0.461 | 67 s
+t= 1560 s  E  6.73 Hz  I 10.24 Hz | E-E w 0.189 (ref 0.091, >0.25: 23.2 %)  in-E w 0.255  I-E w 0.471 | 63 s
+t= 1620 s  E  6.11 Hz  I  8.77 Hz | E-E w 0.189 (ref 0.094, >0.25: 23.6 %)  in-E w 0.251  I-E w 0.478 | 58 s
+t= 1680 s  E  6.15 Hz  I  8.36 Hz | E-E w 0.194 (ref 0.098, >0.25: 24.0 %)  in-E w 0.255  I-E w 0.485 | 57 s
+t= 1740 s  E  5.88 Hz  I  8.81 Hz | E-E w 0.193 (ref 0.101, >0.25: 23.7 %)  in-E w 0.254  I-E w 0.491 | 55 s
+t= 1800 s  E  6.45 Hz  I  9.91 Hz | E-E w 0.198 (ref 0.104, >0.25: 24.3 %)  in-E w 0.260  I-E w 0.500 | 62 s
+=== c10 / init: recorded 300 s, 106 presentations
+cells coding for each shape (rate > 10 Hz while it is shown): circle 1424, square 1616, cross 1413, triangle 1661; for none 2113 (52 %); for more than one 1721
+mean rate of each group (rows) while each shape is shown (columns), Hz:
+  circle     16.8   18.1   13.7   15.1
+  square     15.5   17.6   13.0   14.9
+  cross      15.4   16.8   14.9   15.1
+  triangle   14.2   15.9   12.9   16.1
+  none        0.8    0.5    0.4    0.4
+mean E-E weight from group (row) to group (column), cells coding for exactly one shape; start value 0.100:
+  circle    0.381  0.083  0.013  0.044  0.072
+  square    0.113  0.329  0.043  0.090  0.097
+  cross     0.032  0.023  0.395  0.098  0.089
+  triangle  0.126  0.163  0.165  0.670  0.173
+  none      0.134  0.159  0.136  0.174  0.205
+pauses longer than 2 s; activity (Hz) of each group from 1 s after switch-off to the next shape; rows = shape shown before:
+             circle   square    cross triangle     none   pauses   own group > 10 Hz
+  circle       10.3     10.3     10.9     11.4      1.1       8      38 %
+  square       13.0     12.6     13.4     13.3      0.1      11      55 %
+  cross        15.0     13.8     14.6     12.8      0.1      10      80 %
+  triangle     12.7     12.3     13.1     12.9      0.1       7     100 %
+whole recorded part: mean rate of coding cells 13.7 Hz, of the others 0.42 Hz
+--- stage 2 (learn): 1800 s, {'on': 0.2, 'off': 5.0, 'scale': 25.0}, sliding threshold off
+t= 1860 s  E  5.45 Hz  I  8.97 Hz | E-E w 0.200 (ref 0.107, >0.25: 25.5 %)  in-E w 0.255  I-E w 0.505 | 52 s
+t= 1920 s  E  6.25 Hz  I  8.59 Hz | E-E w 0.198 (ref 0.109, >0.25: 25.2 %)  in-E w 0.240  I-E w 0.511 | 59 s
+t= 1980 s  E  7.07 Hz  I  8.59 Hz | E-E w 0.204 (ref 0.112, >0.25: 25.5 %)  in-E w 0.242  I-E w 0.521 | 66 s
+t= 2040 s  E  6.73 Hz  I  8.45 Hz | E-E w 0.210 (ref 0.114, >0.25: 26.0 %)  in-E w 0.247  I-E w 0.530 | 63 s
+t= 2100 s  E  5.99 Hz  I  7.56 Hz | E-E w 0.205 (ref 0.117, >0.25: 25.4 %)  in-E w 0.235  I-E w 0.536 | 58 s
+t= 2160 s  E  6.23 Hz  I  7.72 Hz | E-E w 0.208 (ref 0.118, >0.25: 25.6 %)  in-E w 0.236  I-E w 0.542 | 58 s
+t= 2220 s  E  6.18 Hz  I  7.49 Hz | E-E w 0.213 (ref 0.120, >0.25: 25.9 %)  in-E w 0.239  I-E w 0.548 | 59 s
+t= 2280 s  E  6.03 Hz  I  7.33 Hz | E-E w 0.218 (ref 0.122, >0.25: 26.3 %)  in-E w 0.243  I-E w 0.553 | 58 s
+t= 2340 s  E  5.81 Hz  I  7.28 Hz | E-E w 0.221 (ref 0.124, >0.25: 26.8 %)  in-E w 0.248  I-E w 0.558 | 55 s
+t= 2400 s  E  5.61 Hz  I  7.08 Hz | E-E w 0.222 (ref 0.126, >0.25: 27.4 %)  in-E w 0.249  I-E w 0.562 | 54 s
+t= 2460 s  E  6.33 Hz  I  8.21 Hz | E-E w 0.222 (ref 0.128, >0.25: 27.6 %)  in-E w 0.246  I-E w 0.569 | 59 s
+t= 2520 s  E  5.83 Hz  I  7.96 Hz | E-E w 0.225 (ref 0.129, >0.25: 28.1 %)  in-E w 0.250  I-E w 0.574 | 57 s
+t= 2580 s  E  4.88 Hz  I  7.93 Hz | E-E w 0.218 (ref 0.131, >0.25: 27.5 %)  in-E w 0.242  I-E w 0.577 | 48 s
+t= 2640 s  E  4.46 Hz  I  7.39 Hz | E-E w 0.217 (ref 0.132, >0.25: 27.6 %)  in-E w 0.242  I-E w 0.578 | 45 s
+t= 2700 s  E  4.59 Hz  I  6.34 Hz | E-E w 0.208 (ref 0.132, >0.25: 26.4 %)  in-E w 0.235  I-E w 0.579 | 47 s
+t= 2760 s  E  5.67 Hz  I  7.08 Hz | E-E w 0.210 (ref 0.133, >0.25: 26.8 %)  in-E w 0.237  I-E w 0.583 | 54 s
+t= 2820 s  E  5.47 Hz  I  7.00 Hz | E-E w 0.214 (ref 0.134, >0.25: 27.2 %)  in-E w 0.241  I-E w 0.587 | 53 s
+t= 2880 s  E  5.13 Hz  I  6.84 Hz | E-E w 0.216 (ref 0.134, >0.25: 27.5 %)  in-E w 0.244  I-E w 0.590 | 51 s
+t= 2940 s  E  4.99 Hz  I  6.29 Hz | E-E w 0.214 (ref 0.135, >0.25: 27.4 %)  in-E w 0.245  I-E w 0.592 | 50 s
+t= 3000 s  E  5.51 Hz  I  7.41 Hz | E-E w 0.211 (ref 0.136, >0.25: 27.4 %)  in-E w 0.240  I-E w 0.596 | 57 s
+t= 3060 s  E  5.21 Hz  I  6.55 Hz | E-E w 0.210 (ref 0.136, >0.25: 27.4 %)  in-E w 0.241  I-E w 0.599 | 52 s
+t= 3120 s  E  4.65 Hz  I  6.15 Hz | E-E w 0.210 (ref 0.137, >0.25: 27.6 %)  in-E w 0.242  I-E w 0.600 | 46 s
+t= 3180 s  E  4.20 Hz  I  6.55 Hz | E-E w 0.205 (ref 0.137, >0.25: 27.1 %)  in-E w 0.237  I-E w 0.601 | 44 s
+t= 3240 s  E  4.19 Hz  I  5.86 Hz | E-E w 0.203 (ref 0.137, >0.25: 27.1 %)  in-E w 0.237  I-E w 0.601 | 44 s
+t= 3300 s  E  3.60 Hz  I  5.71 Hz | E-E w 0.200 (ref 0.137, >0.25: 26.8 %)  in-E w 0.236  I-E w 0.600 | 41 s
+t= 3360 s  E  3.72 Hz  I  5.49 Hz | E-E w 0.198 (ref 0.138, >0.25: 26.5 %)  in-E w 0.235  I-E w 0.601 | 41 s
+t= 3420 s  E  5.15 Hz  I  4.82 Hz | E-E w 0.200 (ref 0.138, >0.25: 26.3 %)  in-E w 0.237  I-E w 0.602 | 51 s
+t= 3480 s  E  4.10 Hz  I  6.18 Hz | E-E w 0.197 (ref 0.138, >0.25: 26.1 %)  in-E w 0.234  I-E w 0.602 | 43 s
+t= 3540 s  E  4.22 Hz  I  6.12 Hz | E-E w 0.198 (ref 0.138, >0.25: 26.0 %)  in-E w 0.235  I-E w 0.603 | 46 s
+t= 3600 s  E  3.46 Hz  I  5.25 Hz | E-E w 0.195 (ref 0.138, >0.25: 25.9 %)  in-E w 0.234  I-E w 0.602 | 40 s
+=== c10 / learn: recorded 600 s, 130 presentations
+pauses longer than 2 s; activity (Hz) of each group from 1 s after switch-off to the next shape; rows = shape shown before:
+             circle   square    cross triangle     none   pauses   own group > 10 Hz
+  circle        3.0      2.9      3.2      3.2      7.2      18      17 %
+  square        6.2      5.9      6.4      6.0      2.8      15      33 %
+  cross         5.3      5.1      5.6      5.4      4.0      23      30 %
+  triangle      5.9      6.2      6.6      7.5      1.2      29       3 %
+whole recorded part: mean rate of coding cells 5.5 Hz, of the others 3.34 Hz
+--- stage 3 (cue): 1800 s, {'on': 0.2, 'off': 5.0, 'scale': 50.0}, sliding threshold off
+t= 3660 s  E  4.98 Hz  I  4.66 Hz | E-E w 0.198 (ref 0.138, >0.25: 25.8 %)  in-E w 0.237  I-E w 0.603 | 49 s
+t= 3720 s  E  4.64 Hz  I  6.56 Hz | E-E w 0.195 (ref 0.138, >0.25: 25.9 %)  in-E w 0.233  I-E w 0.605 | 47 s
+t= 3780 s  E  3.10 Hz  I  4.77 Hz | E-E w 0.194 (ref 0.138, >0.25: 25.7 %)  in-E w 0.235  I-E w 0.604 | 36 s

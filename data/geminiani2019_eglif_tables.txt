@@ -1,0 +1,50 @@
+4 tables
+
+####  TABLE 1 - Electroresponsive properties of cerebellar neurons.
+Auto-rhythm (Hz) | CVISI (in vitro) | f-Istim slope (Hz/pA) | SFA | Post-inhibitory rebound | Phase reset | Resonance | STO
+GoC Forti et al., 2006; Solinas et al., 2007b; D’Angelo et al.,2013 | 5–15 | 0.03 | ∼0.2 | ✓ | ✓ | ✓ | ✓ (ϑ band) | ✓ (ϑ band)
+GR D’Angelo et al., 2001; Masoli et al.,2017 | – | – | ∼4 ÷ 10 | – | – | – | ✓ (ϑ band) | ✓ (ϑ band)
+MLI Lachamp et al., 2009; Galliano et al.,2013 | ∼8.5 | 0.36 | ∼2.5 | – | – | – | – | –
+PC McKay and Turner, 2005; Molineux et al., 2006; Lennon et al., 2014; Masoli et al.,2015 | 40–80 | 0.04 | ∼0.08 | ✓ | ✓ | – | – | –
+DCNnL Llinas, 1988; Aizenman and Linden, 1999; Uusisaari et al., 2007; De Schutter and Steuber,2009 | ∼30 | 0.06 | ∼0.2 | ✓ | ✓ | – | – | –
+DCNp Uusisaari et al.,2007 | ∼10 | N.A. | ∼0.18 | ✓ | ✓ | – | – | –
+IO De Gruijl et al., 2012; Lefler et al.,2013 | ∼1 | – | – | – | ✓ | ✓ | ✓ | ✓ (1–7 Hz)
+FOOT: CVISI, coefficient of variation of inter-spike intervals; SFA, spike-frequency adaptation; STO, sub-threshold oscillations. Reference literature studies are reported in the first column.
+
+####  TABLE 2 - Electrophysiological passive properties chosen from literature for the different cerebellar neurons.
+Cm (pF) | τ m (ms) | EL (mV) | tref (ms) | Vr (mV) | Vth (mV)
+GoC | 145 | 44 | −62 | 2 | −75 | −55
+Forti et al., 2006; Solinas et al., 2007a; Tripathy et al., 2014 | (145 ± 73) | (44 ± 22) | (−62) | (2 ± 0.4) | (−75) | (−55 ± 1)
+GR | 7 | 24.15 | −62 | 1.5 | −70 | −41
+D’Angelo et al., 1998, 2001; Tripathy et al., 2014; Houston et al.,2017 | (5.5 ± 0.5) | (24.15 ± 2) | (−62 ± 11) | (1.5 ± 0.4) | (−70) | (−41 ± 3)
+MLI | 14.6 | 9.125 | −68 | 1.59 | −78 | −53
+Lennon et al., 2014 | (14.6) | (9.125) | (−68) | (1.59) | (−78) | (−53)
+PC | 334 | 47 | −59 | 0.5 | −69 | −43
+Hourez et al., 2011; Hoxha et al.,2012 | (334 ± 106) | (47 ± 32) | (−59 ± 6) | (0.5 ± 0.1) | (−69) | (−43 ± 2)
+DCNnL | 142 | 33 | −45 | 1.5 | −55 | −36
+Uusisaari et al.,2007 | (142 ± 31) | (33 ± 18) | (−45 ± 13) | (1.5 ± 0.2) | (−55) | (−36 ± 7)
+DCNp | 56 | 56 | −40 | 3.02 | −55 | −39
+Uusisaari et al.,2007 | (56 ± 26) | (56 ± 30) | (−40 ± 13) | (3.02 ± 0.3) | (−55) | (−39 ± 8)
+IO | 189 | 11 | −45 | 1 | −45 | −35
+Long et al., 2002; De Zeeuw et al., 2003; Van Der Giessen et al.,2008 | (189 ± 12) | (11 ± 4) | (−45) | (1) | (−45) | (−35)
+FOOT: Experimental reference values are reported in brackets as mean ± SD (Standard Deviation – when available), from literature reference studies reported in the first column.
+
+####  TABLE 3 - Optimized parameter sets of E-GLIF models for each neuron type.
+kadap (MH–1) | k2 (ms–1) | A2 (pA) | k1 (ms–1) | A1 (pA) | Ie (pA)
+GoC (Geminiani et al., 2018) | 0.217 | 0.023 | 178.01 | 0.031 | 259.988 | 16.214
+GR | 0.022 | 0.041 | –0.94 | 0.311 | 0.01 | –0.888
+MLI | 2.025 | 1.096 | 5.863 | 1.887 | 5.953 | 3.711
+PC | 1.491 | 0.041 | 172.622 | 0.195 | 157.622 | 742.534
+DCNnL | 0.408 | 0.047 | 3.477 | 0.697 | 13.857 | 75.385
+DCNp | 0.079 | 0.044 | 176.358 | 0.041 | 176.358 | 2.384
+IO | 1.928 | 0.091 | 1358.197 | 0.191 | 1810.923 | –18.101
+
+####  TABLE 4 - Intrinsic excitability properties of optimized E-GLIF neurons.
+ftonic (Hz) | CVISI (mean) | f-Istim slope | lat_rebound (ms) | rebound_freq (Hz)
+GR | – | – | 3.70 | – | –
+MLI | 9.51 ± 0.17 | 0.13 | 2.16 | (172.96 ± 11.07) | (10.03 ± 1.54)
+PC | 60.96 ± 0.15 | 0.04 | 0.08 | 10.62 ± 0.15 | 183.01 ± 6.14
+DCNnL | 31.48 ± 0.16 | 0.06 | 0.28 | 23.95 ± 0.39 | 64.81 ± 4.49
+DCNp | 14.37 ± 0.1 | 0.09 | 0.4 | 69.32 ± 0.94 | 42.14 ± 3.54
+IO | – | – | – | 59.22 ± 1.96 | –
+FOOT: Values are reported as mean ± SD over the 10 PyNEST simulations for each neuron type.
