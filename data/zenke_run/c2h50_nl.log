@@ -1,0 +1,5 @@
+settings {'nsit': 4, 'mc': 256, 'mm': 256, 'K': 60, 'w': 0.9, 'bg': 1.0, 'ctx': True, 'ee': 0.0, 'hom': 1.0, 'scale': 50.0, 'tag': 'c2h50_nl'}
+before training       | cells lit by a member alone: 0 (rate 0.0 Hz), by a context alone: 0 | shared by the two members of ONE situation 0.00, by members of DIFFERENT situations 0.00 | member and its own context 0.00, another context 0.00 | correlation of the cells' rates: same situation -0.00, different -0.00
+t=  300 s | while a pair is shown: 2.6 % of the cells above 10 Hz, mean rate 1.0 Hz | weights: input 0.916 (max 1.68), E-E 0.101, I-E 0.200 | 72 s
+  test at   300 s      | cells lit by a member alone: 6 (rate 13.8 Hz), by a context alone: 22 | shared by the two members of ONE situation 0.00, by members of DIFFERENT situations 0.00 | member and its own context 0.00, another context 0.00 | correlation of the cells' rates: same situation -0.00, different -0.00
+t=  600 s | while a pair is shown: 4.4 % of the cells above 10 Hz, mean rate 1.5 Hz | weights: input 0.914 (max 2.00), E-E 0.103, I-E 0.200 | 153 s

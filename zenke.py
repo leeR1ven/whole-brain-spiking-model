@@ -84,9 +84,9 @@ def build(seed=1, wee=0.1, wie=0.2, xi=0.5, sparse=0.05, alpha=4.0, sparse_ee=No
 
 
 def params(eta=1e-3, beta=0.05, delta=0.02, alpha=4.0, taud=0.15, tauf=0.6, U=0.2, bg=5.0, scale=25.0, on=1.0, off=2.0, wei=0.2, wii=0.2,
-           wmax=5.0, wmaxi=5.0, wa=0.0, wc=0.5, pot=0.1, hom=0.0, tauh=600.0, kappa=10.0, plastic=1.0, seq=0.0, tau_pre=0.02, adapt2=0.0, ee_on=1.0):
+           wmax=5.0, wmaxi=5.0, wa=0.0, wc=0.5, pot=0.1, hom=0.0, tauh=600.0, kappa=10.0, plastic=1.0, seq=0.0, tau_pre=0.02, adapt2=0.0, ee_on=1.0, ne=NE):
     wt = (wc - wa) / 4.0; norm = (wt - wa) * (wt - (wa + wc) / 2) * (wt - wc)
-    return np.array([eta, beta, delta * (eta / 1e-3) * eta, wmax, 3 * wei, wii, wmaxi, (eta / 50) / (alpha * NE), alpha * NE, taud, tauf, U, bg, scale, on, off,
+    return np.array([eta, beta, delta * (eta / 1e-3) * eta, wmax, 3 * wei, wii, wmaxi, (eta / 50) / (alpha * ne), alpha * ne, taud, tauf, U, bg, scale, on, off,
                      pot / norm, wa, (wa + wc) / 2, wc, hom, tauh, kappa, plastic, seq, tau_pre, adapt2, ee_on])
 
 
