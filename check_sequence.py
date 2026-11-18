@@ -8,8 +8,13 @@ import zenke as Z, zenke_ana as A
 T = float(sys.argv[1]) if len(sys.argv) > 1 else 1800.0; OFF = float(sys.argv[2]) if len(sys.argv) > 2 else 2.0
 TP = float(sys.argv[3]) if len(sys.argv) > 3 else 0.02           # time window (s) of the sending cell's trace in the potentiation (paper: 0.02)
 ON = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0             # how long each shape is shown (s)
-tag = 'seq%g' % OFF + ('' if TP == 0.02 else '_tp%g' % TP) + ('' if ON == 1.0 else '_on%g' % ON); OUT = A.OUT; shapes = Z.load_patterns(Z.CODE + '/shapes.pat'); names = A.NAMES
-sim = Z.Sim(1); P = Z.params(on=ON, off=OFF, scale=25.0, seq=1.0, tau_pre=TP); t_done = 0.0; spikes = []; evs = []; rec_last = min(300.0, T)
+X = eval(sys.argv[5]) if len(sys.argv) > 5 else {}                # extra settings: rule parameters, and patches=True for four inputs that do not overlap
+PATCH = X.pop('patches', False); tag = 'seq%g' % OFF + ('' if TP == 0.02 else '_tp%g' % TP) + ('' if ON == 1.0 else '_on%g' % ON) + ''.join('_%s%g' % kv for kv in X.items()) + ('_patch' if PATCH else ''); OUT = A.OUT; shapes = Z.load_patterns(Z.CODE + '/shapes.pat'); names = A.NAMES
+if PATCH:
+    def patch(k):
+        cx, cy = (10, 32, 54)[k % 3], (10, 32, 54)[k // 3]; return np.array([x + 64 * y for y in range(cy - 8, cy + 8) for x in range(cx - 8, cx + 8)], dtype=np.int64)
+    shapes = [np.sort(np.concatenate([patch(2 * k), patch(2 * k + 1)])) for k in range(4)]; names = ['one', 'two', 'three', 'four']; A.NAMES = names
+sim = Z.Sim(1); P = Z.params(on=ON, off=OFF, scale=25.0, seq=1.0, tau_pre=TP, **X); t_done = 0.0; spikes = []; evs = []; rec_last = min(300.0, T)
 while t_done < T - 1e-9:
     chunk = min(60.0, T - t_done); rec = t_done >= T - rec_last - 1e-9; t0 = time.time()
     re, ri, ev, sp = sim.run(chunk, P, shapes, record=rec, max_spikes=10_000_000); t_done += chunk; S = sim.S; evs.append(ev)

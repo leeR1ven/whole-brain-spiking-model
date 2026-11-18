@@ -4,7 +4,12 @@ usage: python3 check_replay.py TAG [adapt2 = 0.002] [seconds left alone = 200]  
 import sys, os, pickle, numpy as np
 import zenke as Z, zenke_ana as A
 tag = sys.argv[1]; AD = float(sys.argv[2]) if len(sys.argv) > 2 else 0.002; T = float(sys.argv[3]) if len(sys.argv) > 3 else 200.0
-M, r = A.sets(tag); shapes = Z.load_patterns(Z.CODE + '/shapes.pat'); names = A.NAMES; order = {0: 1, 1: 2, 2: 3, 3: 0}
+M, r = A.sets(tag); shapes = Z.load_patterns(Z.CODE + '/shapes.pat'); names = A.NAMES
+if tag.endswith('_patch'):
+    def patch(k):
+        cx, cy = (10, 32, 54)[k % 3], (10, 32, 54)[k // 3]; return np.array([x + 64 * y for y in range(cy - 8, cy + 8) for x in range(cx - 8, cx + 8)], dtype=np.int64)
+    shapes = [np.sort(np.concatenate([patch(2 * k), patch(2 * k + 1)])) for k in range(4)]; names = ['one', 'two', 'three', 'four']
+pass; order = {0: 1, 1: 2, 2: 3, 3: 0}
 sim = Z.Sim(1); sim.S = pickle.load(open(os.path.join(A.OUT, tag + '_state.pkl'), 'rb')); Z.seed(11)
 def watch(seconds, label, bg=5.0):
     P2 = Z.params(on=0.2, off=1e7, scale=25.0, plastic=0.0, adapt2=AD, bg=bg); s0 = sim.S['step']; re, ri, ev, sp = sim.run(seconds, P2, shapes, record=True, max_spikes=30_000_000); t, i = sp; seq = []
