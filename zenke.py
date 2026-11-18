@@ -84,10 +84,10 @@ def build(seed=1, wee=0.1, wie=0.2, xi=0.5, sparse=0.05, alpha=4.0, sparse_ee=No
 
 
 def params(eta=1e-3, beta=0.05, delta=0.02, alpha=4.0, taud=0.15, tauf=0.6, U=0.2, bg=5.0, scale=25.0, on=1.0, off=2.0, wei=0.2, wii=0.2,
-           wmax=5.0, wmaxi=5.0, wa=0.0, wc=0.5, pot=0.1, hom=0.0, tauh=600.0, kappa=10.0, plastic=1.0, seq=0.0, tau_pre=0.02, adapt2=0.0, ee_on=1.0, ne=NE):
+           wmax=5.0, wmaxi=5.0, wa=0.0, wc=0.5, pot=0.1, hom=0.0, tauh=600.0, kappa=10.0, plastic=1.0, seq=0.0, tau_pre=0.02, adapt2=0.0, ee_on=1.0, wmax2=5.0, ne=NE):
     wt = (wc - wa) / 4.0; norm = (wt - wa) * (wt - (wa + wc) / 2) * (wt - wc)
     return np.array([eta, beta, delta * (eta / 1e-3) * eta, wmax, 3 * wei, wii, wmaxi, (eta / 50) / (alpha * ne), alpha * ne, taud, tauf, U, bg, scale, on, off,
-                     pot / norm, wa, (wa + wc) / 2, wc, hom, tauh, kappa, plastic, seq, tau_pre, adapt2, ee_on])
+                     pot / norm, wa, (wa + wc) / 2, wc, hom, tauh, kappa, plastic, seq, tau_pre, adapt2, ee_on, wmax2])
 
 
 @njit(cache=True)
@@ -114,6 +114,7 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
     # adapt2: the second, long-lasting adaptation of the excitatory cells (paper: Methods, used in its Fig. 4c; the simulator's
     # neuron class AIF2Group: decay 20 s, default jump 0.002; the paper's run scripts leave it at 0)
     dg2 = P[26]; s_ad2 = exp(-dt / 20.0)
+    wmax2 = P[28]
     ee_on = P[27] > 0                                                # 0: the E -> E synapses are switched off (no loop among the excitatory cells) - a control, not the paper
     ne = memE.shape[0]; ni = memI.shape[0]; ns = xS.shape[0]; npat = pat_ptr.shape[0] - 1; nd = dE.shape[0]
     spE = np.zeros(ne, np.int64); spI = np.zeros(ni, np.int64); nrec = rec_t.shape[0]; nev = ev.shape[0]
@@ -186,6 +187,7 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
                         r = hom[i] / tauh / kappa; w = ee_ws[k, 0] - eta * trpost[i] * r * r + delta
                     else:
                         w = ee_ws[k, 0] - eta * trpost[i] + delta
+                    if ee_pl[k] == 2 and w > wmax2: w = wmax2
                     ee_ws[k, 0] = w if w > 0.0 else 0.0
             at = dEa2[slot, a]
             for k in range(ei_ptr[j], ei_ptr[j + 1]):
@@ -207,7 +209,8 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
                     k = ee_bpos[q]
                     if ee_pl[k] == 0: continue
                     w = ee_ws[k, 0] + eta_ee * zs * trpre[ee_bpre[q]] - z3 * (ee_ws[k, 0] - ee_ws[k, 1])
-                    ee_ws[k, 0] = wmax if w > wmax else (0.0 if w < 0.0 else w)
+                    cap = wmax if ee_pl[k] == 1 else wmax2     # ee_pl = 2: synapses with their own, lower ceiling (returns from a higher level; not in the paper)
+                    ee_ws[k, 0] = cap if w > cap else (0.0 if w < 0.0 else w)
                 for q in range(se_bptr[i], se_bptr[i + 1]):
                     k = se_bpos[q]; w = se_ws[k, 0] + eta * zs * trS[se_bpre[q]] - z3 * (se_ws[k, 0] - se_ws[k, 1])
                     se_ws[k, 0] = wmax if w > wmax else (0.0 if w < 0.0 else w)
