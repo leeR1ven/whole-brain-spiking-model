@@ -1,0 +1,25 @@
+t=  602 s | E-E weight 0.331, input weight 0.476, I-E weight 0.539 | 733 s
+t= 1203 s | E-E weight 0.332, input weight 0.527, I-E weight 0.627 | 1238 s
+t= 1805 s | E-E weight 0.342, input weight 0.593, I-E weight 0.700 | 1722 s
+t= 2406 s | E-E weight 0.356, input weight 0.637, I-E weight 0.766 | 2189 s
+t= 3008 s | E-E weight 0.368, input weight 0.666, I-E weight 0.822 | 2629 s
+t= 3610 s | E-E weight 0.380, input weight 0.693, I-E weight 0.871 | 3044 s
+cells coding for the four inputs: 798, 776, 739, 689; for more than one 85
+mean weight from group (row) to group (column):
+  one    1.612  0.118  0.021  0.046
+  two    0.016  1.652  0.142  0.048
+  three  0.024  0.028  1.643  0.299
+  four   0.055  0.047  0.179  1.556
+to the NEXT group: 0.118 0.142 0.299   to the PREVIOUS one: 0.016 0.028 0.179
+learning off, adaptation jump 0.0000. Most active group every second (name + Hz; - = none above 5 Hz):
+  "one" shown 0.5 s:    one30 one22 one20 one19 one20 one20 one20 one21 one20 one18 one19 one21 one19 one19 one20 one20 one20 one19 one20 one21 one21 one22 one19 one20 one17 one21 one19 one21 one21 one22 one22 one19 one21 one20 one21 one21 one19 one19 one21 one21
+  "two" shown 0.5 s:    two27 two14 two 9 fou 7 fou 8 fou 7 fou 7 fou 7 fou 7 fou 8 fou 9 fou10 fou 9 fou10 fou 8 fou 9 fou 8 fou 7 fou 8 fou 7 fou 8 fou10 fou10 fou 9 fou 9 fou 8 fou10 fou10 fou10 fou 9 fou 8 fou 9 fou10 fou 9 fou 9 fou10 fou 9 fou 9 fou 9 fou 9
+  nothing shown:        fou12 fou11 fou11 fou10 fou 9 fou 9 fou 8 fou 9 fou 9 fou10 fou10 fou10 fou 9 fou10 fou 8 fou 9 fou 8 fou 9 fou 9 fou 9 fou 8 fou 8 fou 8 fou 8 fou 8 fou10 fou10 fou 9 fou 8 fou 8 fou 8 fou 8 fou 8 fou10 fou10 fou 9 fou 9 fou10 fou10 fou10
+learning off, adaptation jump 0.0020. Most active group every second (name + Hz; - = none above 5 Hz):
+  "one" shown 0.5 s:    one29 one18 one15 one16 one16 one12 fou 8 fou 9 fou10 fou 9 fou10 fou10 fou 9 fou 9 fou 9 fou10 fou11 fou 8 fou 8 fou 7 fou 7 fou10 fou 9 fou 8 fou 8 fou 8 fou 8 fou 7 thr 7 thr 7 fou 7 thr 9 thr 8 thr 8 thr 6 fou 8 fou 9 fou 8 fou 6 fou 6
+  "two" shown 0.5 s:    two25 two 7 fou 7 fou 8 fou 9 fou10 fou11 fou 9 fou 8 fou 8 thr 6 fou 9 fou 8 fou 8 fou 7 fou 8 fou 6 fou 7 fou 6 fou 8 thr 7 fou 8 fou 7 thr 8 fou 8 fou 7 one15 one19 one20 one21 one17 one17 one16 fou 8 fou 9 fou10 fou 7 fou 7 fou10 fou10
+  nothing shown:        fou12 fou 9 fou10 fou10 fou 9 fou 9 fou 9 fou10 fou 7 fou 7 fou 8 fou 8 fou 8 fou 7 fou 7 fou 6 fou 7 thr 9 thr12 thr 7 fou 7 fou 9 fou 8 fou 7 one 7 one20 one21 one20 one22 one19 one16 one14 one17 fou 6 thr11 thr12 thr 9 thr11 fou 8 fou10
+learning off, adaptation jump 0.0040. Most active group every second (name + Hz; - = none above 5 Hz):
+  "one" shown 0.5 s:    one27 one 9 fou10 fou10 fou 9 fou 8 fou 8 fou 6 fou 9 fou 8 thr12 thr12 thr14 thr10 fou 8 fou 8 fou 8 fou 9 fou 8 fou 6 two13 two16 two17 two18 two11 fou 6 fou 7 fou 9 fou 9 fou 9 fou 8 fou 7 thr 6 fou 7 thr 8 thr11 thr 6 one18 one22 one20
+  "two" shown 0.5 s:    two22 fou 7 fou 8 thr 9 fou 8 fou 8 fou 9 fou 9 fou 8 thr 7 thr11 thr 9 fou 9 fou 9 one12 one21 one20 one17 one17 one 8 fou10 fou 8 fou 7 fou 9 fou 8 fou 8 fou 7 fou 7 thr12 thr11 fou 6 thr 8 fou 7 fou 7 fou 6 two14 two17 two16 two13 two 6
+  nothing shown:        fou13 fou 9 fou 9 thr 8 fou 8 fou 8 fou 7 fou 7 fou 8 fou 7 thr 8 fou 7 fou 6 fou 8 fou 6 fou 6 fou 5 one13 one20 one19 one17 one15 one15 one14 one 6 fou10 fou 8 fou 8 fou10 fou 8 fou 8 two 6 two13 two16 two13 two14 two11 thr 6 thr10 fou 9

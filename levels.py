@@ -27,10 +27,11 @@ def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0, clusters=None
     pre, post, w = np.concatenate(pre), np.concatenate(post), np.concatenate(w); o = np.argsort(pre, kind='stable')
     S['se'] = Z.csr(pre, post, NS, ne); S['se_ws'] = np.zeros((len(pre), 2)); S['se_ws'][:, 0] = w[o]
     pre, post, w = [], [], []
-    for (a, b), (p, w0) in ee.items():
-        m = rng.random((sizes[a], sizes[b])) < p
-        if a == b: np.fill_diagonal(m, False)
-        i, j = np.nonzero(m); pre.append(i + off[a]); post.append(j + off[b]); w.append(np.full(len(i), w0))
+    for (a, b), spec in ee.items():                                  # (probability, weight) or a list of such pairs (a few strong + many weak links)
+        for p, w0 in (spec if isinstance(spec, list) else [spec]):
+            m = rng.random((sizes[a], sizes[b])) < p
+            if a == b: np.fill_diagonal(m, False)
+            i, j = np.nonzero(m); pre.append(i + off[a]); post.append(j + off[b]); w.append(np.full(len(i), w0))
     pl = [np.ones(len(x), np.int8) for x in pre]
     for lv, (size, p_in, w_in, p_out, w_out, plastic) in (clusters or {}).items():
         g = np.arange(sizes[lv]) // size; same = g[:, None] == g[None, :]

@@ -20,3 +20,24 @@ t= 1140 s  E  9.92 Hz  I 10.30 Hz | E-E w 0.409 (>0.25: 31.3 %) | 68 s
 t= 1200 s  E  9.67 Hz  I 10.27 Hz | E-E w 0.414 (>0.25: 31.7 %) | 64 s
 t= 1260 s  E  9.67 Hz  I 10.30 Hz | E-E w 0.419 (>0.25: 32.0 %) | 66 s
 t= 1320 s  E  9.42 Hz  I 10.30 Hz | E-E w 0.425 (>0.25: 32.3 %) | 64 s
+t= 1380 s  E  9.49 Hz  I 10.18 Hz | E-E w 0.431 (>0.25: 32.2 %) | 62 s
+t= 1440 s  E  9.50 Hz  I 10.33 Hz | E-E w 0.435 (>0.25: 32.6 %) | 65 s
+t= 1500 s  E  9.43 Hz  I 10.25 Hz | E-E w 0.441 (>0.25: 32.6 %) | 64 s
+t= 1560 s  E  8.76 Hz  I 10.14 Hz | E-E w 0.444 (>0.25: 33.0 %) | 59 s
+t= 1620 s  E  9.04 Hz  I 10.20 Hz | E-E w 0.449 (>0.25: 33.2 %) | 58 s
+t= 1680 s  E  8.90 Hz  I 10.17 Hz | E-E w 0.454 (>0.25: 33.6 %) | 65 s
+t= 1740 s  E  8.87 Hz  I 10.12 Hz | E-E w 0.459 (>0.25: 33.6 %) | 63 s
+t= 1800 s  E  8.78 Hz  I 10.11 Hz | E-E w 0.463 (>0.25: 33.9 %) | 60 s
+=== cells coding for circle, square, cross, triangle: 845, 862, 879, 890; for more than one 41
+mean weight from group (row) to group (column); cells coding for exactly one shape; start 0.100:
+  one       1.957  0.163  0.026  0.023
+  two       0.024  2.019  0.185  0.027
+  three     0.023  0.024  2.001  0.163
+  four      0.142  0.028  0.025  2.016
+to the NEXT group in the order: 0.163 0.185 0.163 0.142   to the PREVIOUS one: 0.023 0.024 0.024 0.025
+no shapes any more, only the usual background; most active group in every second (name + Hz, - = none above 5 Hz):
+  left alone, 40 s                thr14 thr 9 fou 7 fou 7 fou 8 fou 8 fou 8 fou10 fou12 fou 9 fou10 fou 9 fou 7 fou 8 fou 8 fou 6 thr 6 fou 7 fou 9 fou 9 fou 7 fou 7 fou 9 fou 9 fou11 fou10 fou 8 fou 7 fou 8 fou 9 fou 9 fou 8 fou 8 fou 8 fou 8 fou 9 fou10 fou11 fou10 fou11
+  one shown 0.2 s, then 20 s      one21 one 8 one 5 thr 6 fou 5 fou10 fou 9 fou10 fou 9 fou 9 fou 9 fou10 fou10 fou10 fou10 fou 9 fou 9 fou11 fou10 fou 8
+  two shown 0.2 s, then 20 s      two18 thr 7 thr 7 fou 8 fou 7 fou 8 fou 8 fou 7 fou 7 fou 7 fou 8 fou 8 fou 9 fou 9 fou 9 fou10 fou10 fou12 fou10 fou11
+  three shown 0.2 s, then 20 s    thr19 thr11 thr 7 fou 6 fou 7 fou 9 fou10 fou10 fou 9 fou10 fou10 fou 9 fou 9 fou10 fou 7 fou10 fou11 fou 9 fou 7 fou 7
+  four shown 0.2 s, then 20 s     fou21 fou10 fou 9 fou10 fou 9 fou10 fou12 fou10 fou 9 fou 8 fou 7 fou 8 fou 8 fou 7 fou 7 fou10 fou 9 fou10 fou11 fou 9
