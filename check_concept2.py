@@ -14,11 +14,11 @@ import sys, time, pickle, os, numpy as np
 import levels as L, zenke as Z
 
 T = float(sys.argv[1]) if len(sys.argv) > 1 else 1800.0
-C = dict(nsit=4, mc=256, mm=256, K=60, w=1.5, bg=1.0, ctx=True, ee=0.05, hom=0.0, scale=25.0, alpha=4.0, kweak=0, wweak=0.05, seed=1, seq=False, par={}, save_at=0, tag='c2'); C.update(eval(sys.argv[2]) if len(sys.argv) > 2 else {})
+C = dict(nsit=4, mc=256, mm=256, K=60, w=1.5, bg=1.0, ctx=True, ee=0.05, hom=0.0, scale=25.0, alpha=4.0, kweak=0, wweak=0.05, seed=1, seq=False, par={}, save_at=0, wee=0.1, n=4096, tag='c2'); C.update(eval(sys.argv[2]) if len(sys.argv) > 2 else {})
 rng = np.random.default_rng(3 + 10 * (C['seed'] - 1)); perm = rng.permutation(L.NS); k = 0; ctx, mem = [], []
 for s in range(C['nsit']):
     ctx.append(np.sort(perm[k:k + C['mc']])); k += C['mc']; mem.append([np.sort(perm[k:k + C['mm']]), np.sort(perm[k + C['mm']:k + 2 * C['mm']])]); k += 2 * C['mm']
-net = L.Net(C['seed'], [4096], [1024], {0: [(C['K'], C['w']), (C['kweak'], C['wweak'])] if C['kweak'] else (C['K'], C['w'])}, {(0, 0): (C['ee'], 0.1)} if C['ee'] > 0 else {(0, 0): (0.0005, 0.1)}, alpha=C['alpha'])
+net = L.Net(C['seed'], [C['n']], [C['n'] // 4], {0: [(C['K'], C['w']), (C['kweak'], C['wweak'])] if C['kweak'] else (C['K'], C['w'])}, {(0, 0): (C['ee'], C['wee'])} if C['ee'] > 0 else {(0, 0): (0.0005, 0.1)}, alpha=C['alpha'])
 P = net.par(bg=C['bg'], hom=C['hom'], scale=C['scale'], alpha=C['alpha'], **C['par']); Poff = net.par(bg=C['bg'], plastic=0.0, scale=C['scale'], alpha=C['alpha'])
 Pfwd = net.par(bg=C['bg'], plastic=0.0, scale=C['scale'], alpha=C['alpha'], ee_on=0.0)          # test with the loop inside the level switched off: what the forward links alone do   # alpha: target mean rate (Hz) of the inhibitory plasticity
 print('settings', C, flush=True)

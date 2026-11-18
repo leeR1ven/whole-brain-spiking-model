@@ -1,0 +1,2 @@
+settings {'nsit': 4, 'mc': 256, 'mm': 256, 'K': 60, 'w': 1.5, 'bg': 1.0, 'ctx': True, 'ee': 0.05, 'hom': 1.0, 'scale': 25.0, 'alpha': 0.5, 'kweak': 350, 'wweak': 0.05, 'seed': 1, 'seq': False, 'par': {}, 'save_at': 0, 'wee': 0.1, 'n': 8192, 'tag': 'c2w_n8k'}
+before training       | cells lit by a member alone: 142 (rate 13.6 Hz), by a context alone: 137 | shared by the two members of ONE situation 0.04, by members of DIFFERENT situations 0.04 | member and its own context 0.03, another context 0.03 | held 0.2 Hz
