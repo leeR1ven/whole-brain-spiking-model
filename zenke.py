@@ -98,7 +98,7 @@ def seed(x):
 @njit(cache=True)
 def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, gaI, ggI, gnI, trpre, trpost, trslow, trS, trI, hom,
         xE, uE, xEI, uEI, xS, uS, lastE, lastS,
-        ee_ptr, ee_post, ee_bptr, ee_bpos, ee_bpre, ee_pre, ee_ws, se_ptr, se_post, se_bptr, se_bpos, se_bpre, se_pre, se_ws,
+        ee_ptr, ee_post, ee_bptr, ee_bpos, ee_bpre, ee_pre, ee_ws, ee_pl, se_ptr, se_post, se_bptr, se_bpos, se_bpre, se_pre, se_ws,
         ie_ptr, ie_post, ie_bptr, ie_bpos, ie_bpre, ie_pre, ie_w, ei_ptr, ei_post, ii_ptr, ii_post,
         dE, dEa, dEa2, dEn, dI, dIn, dS, dSa, dSn, sched, pf, pat_ptr, pat_idx, cntE, cntI, rec_t, rec_i, rec_n, ev):
     eta, beta, delta, wmax, w_ei, w_ii, wmaxi, lr, expected = P[0], P[1], P[2], P[3], P[4], P[5], P[6], P[7], P[8]
@@ -181,7 +181,7 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
             j = dE[slot, a]; at = dEa[slot, a]
             for k in range(ee_ptr[j], ee_ptr[j + 1] if ee_on else ee_ptr[j]):
                 i = ee_post[k]; gaE[i] += ee_ws[k, 0] * at
-                if plastic:
+                if plastic and ee_pl[k]:                       # ee_pl[k] = 0: this E -> E synapse is kept fixed (not in the paper)
                     if use_hom:
                         r = hom[i] / tauh / kappa; w = ee_ws[k, 0] - eta * trpost[i] * r * r + delta
                     else:
@@ -204,7 +204,9 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
             for a in range(nE):
                 i = spE[a]; zs = trslow[i]; z3 = beta * trpost[i] ** 3
                 for q in range(ee_bptr[i], ee_bptr[i + 1] if ee_on else ee_bptr[i]):
-                    k = ee_bpos[q]; w = ee_ws[k, 0] + eta_ee * zs * trpre[ee_bpre[q]] - z3 * (ee_ws[k, 0] - ee_ws[k, 1])
+                    k = ee_bpos[q]
+                    if ee_pl[k] == 0: continue
+                    w = ee_ws[k, 0] + eta_ee * zs * trpre[ee_bpre[q]] - z3 * (ee_ws[k, 0] - ee_ws[k, 1])
                     ee_ws[k, 0] = wmax if w > wmax else (0.0 if w < 0.0 else w)
                 for q in range(se_bptr[i], se_bptr[i + 1]):
                     k = se_bpos[q]; w = se_ws[k, 0] + eta * zs * trS[se_bpre[q]] - z3 * (se_ws[k, 0] - se_ws[k, 1])
@@ -255,6 +257,7 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
         pf[0] = pf[0] * pfm + nEd / 10.0
         if plastic and step % 12000 == 0:
             for k in range(ee_ws.shape[0]):
+                if ee_pl[k] == 0: continue
                 s_ = ee_ws[k, 1]; ee_ws[k, 1] = s_ + ((ee_ws[k, 0] - s_) + pot * (wa - s_) * (wb - s_) * (wc - s_)) * 1e-3
             for k in range(se_ws.shape[0]):
                 s_ = se_ws[k, 1]; se_ws[k, 1] = s_ + ((se_ws[k, 0] - s_) + pot * (wa - s_) * (wb - s_) * (wc - s_)) * 1e-3
@@ -272,12 +275,13 @@ class Sim:
         """returns (E rate, I rate, stimulus log [step, on/off, pattern], spikes (step, cell) or None)"""
         S = self.S; n = int(round(seconds / DT))
         if len(S['E']) == 6: S['E'].append(np.zeros(NE))                      # a state saved before the slow adaptation existed
+        if 'ee_pl' not in S: S['ee_pl'] = np.ones(len(S['ee_ws']), np.int8)
         pat_ptr = np.concatenate([[0], np.cumsum([len(p) for p in pats])]).astype(np.int64); pat_idx = np.concatenate(pats)
         rec_t = np.zeros(max_spikes, np.int64) if record else self.none_t
         rec_i = np.zeros(max_spikes, np.int32) if record else self.none_i
         rec_n = np.array([0 if record else 1], np.int64); ev = np.zeros((max(16, int(seconds * 40)), 3))
         self.cntE[:] = 0; self.cntI[:] = 0
-        run(n, S['step'], P, *S['E'], *S['I'], *S['tr'], *S['stp'], *S['ee'], S['ee_ws'], *S['se'], S['se_ws'],
+        run(n, S['step'], P, *S['E'], *S['I'], *S['tr'], *S['stp'], *S['ee'], S['ee_ws'], S['ee_pl'], *S['se'], S['se_ws'],
             *S['ie'], S['ie_w'], S['ei'][0], S['ei'][1], S['ii'][0], S['ii'][1], *S['dl'], S['sched'], S['pf'], pat_ptr, pat_idx,
             self.cntE, self.cntI, rec_t, rec_i, rec_n, ev)
         S['step'] += n; k = int(ev[0, 0])

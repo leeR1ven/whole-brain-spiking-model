@@ -12,15 +12,18 @@ import zenke as Z
 NS, DELAY = Z.NS, Z.DELAY
 
 
-def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0):
+def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0, clusters=None):
     """sizes / ni: excitatory / inhibitory cells per level.
     s_in: {level: (inputs per cell from the S units, start weight)}  - drawn at random over all S units.
-    ee:   {(from level, to level): (connection probability, start weight)}"""
+    ee:   {(from level, to level): (connection probability, start weight)}
+    clusters: {level: (cells per group, p inside a group, weight inside, p between groups, weight between, plastic 0 / 1)}
+              - the loop INSIDE that level is built from groups of cells that excite each other (given, not learned)."""
     rng = np.random.default_rng(seed); S = {}; ne, nI = int(sum(sizes)), int(sum(ni))
     off = np.concatenate([[0], np.cumsum(sizes)]).astype(int); ioff = np.concatenate([[0], np.cumsum(ni)]).astype(int)
     pre, post, w = [], [], []
-    for lv, (k, w0) in s_in.items():
-        m = rng.random((NS, sizes[lv])) < k / NS; i, j = np.nonzero(m); pre.append(i); post.append(j + off[lv]); w.append(np.full(len(i), w0))
+    for lv, spec in s_in.items():                                    # (inputs per cell, weight) or a list of such pairs, e.g. a few strong + many weak ones
+        for k, w0 in (spec if isinstance(spec, list) else [spec]):
+            m = rng.random((NS, sizes[lv])) < k / NS; i, j = np.nonzero(m); pre.append(i); post.append(j + off[lv]); w.append(np.full(len(i), w0))
     pre, post, w = np.concatenate(pre), np.concatenate(post), np.concatenate(w); o = np.argsort(pre, kind='stable')
     S['se'] = Z.csr(pre, post, NS, ne); S['se_ws'] = np.zeros((len(pre), 2)); S['se_ws'][:, 0] = w[o]
     pre, post, w = [], [], []
@@ -28,8 +31,13 @@ def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0):
         m = rng.random((sizes[a], sizes[b])) < p
         if a == b: np.fill_diagonal(m, False)
         i, j = np.nonzero(m); pre.append(i + off[a]); post.append(j + off[b]); w.append(np.full(len(i), w0))
-    pre, post, w = np.concatenate(pre), np.concatenate(post), np.concatenate(w); o = np.argsort(pre, kind='stable')
-    S['ee'] = Z.csr(pre, post, ne, ne); S['ee_ws'] = np.zeros((len(pre), 2)); S['ee_ws'][:, 0] = w[o]
+    pl = [np.ones(len(x), np.int8) for x in pre]
+    for lv, (size, p_in, w_in, p_out, w_out, plastic) in (clusters or {}).items():
+        g = np.arange(sizes[lv]) // size; same = g[:, None] == g[None, :]
+        m = rng.random((sizes[lv], sizes[lv])) < np.where(same, p_in, p_out); np.fill_diagonal(m, False); i, j = np.nonzero(m)
+        pre.append(i + off[lv]); post.append(j + off[lv]); w.append(np.where(same[i, j], w_in, w_out)); pl.append(np.full(len(i), plastic, np.int8))
+    pre, post, w, pl = np.concatenate(pre), np.concatenate(post), np.concatenate(w), np.concatenate(pl); o = np.argsort(pre, kind='stable')
+    S['ee'] = Z.csr(pre, post, ne, ne); S['ee_ws'] = np.zeros((len(pre), 2)); S['ee_ws'][:, 0] = w[o]; S['ee_ws'][:, 1] = np.where(pl[o] == 0, w[o], 0.0); S['ee_pl'] = pl[o]
     def within(na_list, nb_list, oa, ob, no_self=False):
         pre, post = [], []
         for lv in range(len(sizes)):
@@ -69,7 +77,7 @@ class Net:
         else:
             S['sched'][:] = (1.0, 0.0, 1e18, 0.0); pats = [np.asarray(units, dtype=np.int64)]
         ptr = np.array([0, len(pats[0])], np.int64); self.cnt[:] = 0; self.cnti[:] = 0; self._ev[0, 0] = 0
-        Z.run(n, S['step'], P, *S['E'], *S['I'], *S['tr'], *S['stp'], *S['ee'], S['ee_ws'], *S['se'], S['se_ws'], *S['ie'], S['ie_w'],
+        Z.run(n, S['step'], P, *S['E'], *S['I'], *S['tr'], *S['stp'], *S['ee'], S['ee_ws'], S['ee_pl'], *S['se'], S['se_ws'], *S['ie'], S['ie_w'],
               S['ei'][0], S['ei'][1], S['ii'][0], S['ii'][1], *S['dl'], S['sched'], S['pf'], ptr, pats[0], self.cnt, self.cnti, self._t, self._i, self._n, self._ev)
         S['step'] += n
         return self.cnt / seconds

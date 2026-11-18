@@ -1,0 +1,2 @@
+settings {'nsit': 4, 'mc': 256, 'mm': 256, 'K': 60, 'w': 1.5, 'bg': 1.0, 'ctx': True, 'ee': 0.05, 'hom': 1.0, 'scale': 25.0, 'alpha': 0.5, 'kweak': 350, 'wweak': 0.05, 'seed': 2, 'seq': True, 'par': {}, 'save_at': 0, 'tag': 'c2w_seq_s2'}
+before training       | cells lit by a member alone: 179 (rate 14.0 Hz), by a context alone: 178 | shared by the two members of ONE situation 0.07, by members of DIFFERENT situations 0.08 | member and its own context 0.07, another context 0.08 | held 0.1 Hz
