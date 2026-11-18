@@ -12,9 +12,13 @@ import zenke as Z
 NS, DELAY = Z.NS, Z.DELAY
 
 
-def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0, clusters=None):
+def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0, clusters=None, s_fixed=None):
     """sizes / ni: excitatory / inhibitory cells per level.
-    s_in: {level: (inputs per cell from the S units, start weight)}  - drawn at random over all S units.
+    s_in: {level: (inputs per cell from the S units, start weight)}  - drawn at random over all S units;
+          (inputs per cell, start weight, S units): drawn at random over the given S units only.
+    s_fixed: [(S units, level, cells of that level, k, weight)] - each of these cells gets exactly k inputs from the given
+          S units (k different units, drawn at random). Both options added 2026-11-18 for check_voice.py; without them the
+          network is built exactly as before.
     ee:   {(from level, to level): (connection probability, start weight)}
     clusters: {level: (cells per group, p inside a group, weight inside, p between groups, weight between, plastic 0 / 1)}
               - the loop INSIDE that level is built from groups of cells that excite each other (given, not learned)."""
@@ -22,8 +26,12 @@ def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0, clusters=None
     off = np.concatenate([[0], np.cumsum(sizes)]).astype(int); ioff = np.concatenate([[0], np.cumsum(ni)]).astype(int)
     pre, post, w = [], [], []
     for lv, spec in s_in.items():                                    # (inputs per cell, weight) or a list of such pairs, e.g. a few strong + many weak ones
-        for k, w0 in (spec if isinstance(spec, list) else [spec]):
-            m = rng.random((NS, sizes[lv])) < k / NS; i, j = np.nonzero(m); pre.append(i); post.append(j + off[lv]); w.append(np.full(len(i), w0))
+        for item in (spec if isinstance(spec, list) else [spec]):
+            k, w0 = item[0], item[1]; units = np.arange(NS) if len(item) < 3 else np.asarray(item[2], np.int64)
+            m = rng.random((len(units), sizes[lv])) < k / len(units); i, j = np.nonzero(m); pre.append(units[i]); post.append(j + off[lv]); w.append(np.full(len(i), w0))
+    for units, lv, cells, k, w0 in (s_fixed or []):
+        for c in cells:
+            pre.append(rng.choice(np.asarray(units, np.int64), k, replace=False)); post.append(np.full(k, int(c) + off[lv])); w.append(np.full(k, w0))
     pre, post, w = np.concatenate(pre), np.concatenate(post), np.concatenate(w); o = np.argsort(pre, kind='stable')
     S['se'] = Z.csr(pre, post, NS, ne); S['se_ws'] = np.zeros((len(pre), 2)); S['se_ws'][:, 0] = w[o]
     pre, post, w = [], [], []
@@ -56,7 +64,7 @@ def build(seed, sizes, ni, s_in, ee, wie=0.2, p_i=0.05, alpha=4.0, clusters=None
     S['dl'] = [np.zeros((DELAY, ne), np.int64), np.zeros((DELAY, ne)), np.zeros((DELAY, ne)), np.zeros(DELAY, np.int64),
                np.zeros((DELAY, nI), np.int64), np.zeros(DELAY, np.int64), np.zeros((DELAY, NS), np.int64), np.zeros((DELAY, NS)), np.zeros(DELAY, np.int64)]
     S['sched'] = np.array([0.0, 0.0, 1e18, 0.0]); S['pf'] = np.array([alpha * ne]); S['step'] = 0
-    S['lev'] = np.repeat(np.arange(len(sizes)), sizes); S['off'] = off
+    S['lev'] = np.repeat(np.arange(len(sizes)), sizes); S['off'] = off; S['ad2'] = z(ne)      # ad2: per-cell extra jump of the slow adaptation (zenke.run)
     return S
 
 
@@ -78,8 +86,9 @@ class Net:
         else:
             S['sched'][:] = (1.0, 0.0, 1e18, 0.0); pats = [np.asarray(units, dtype=np.int64)]
         ptr = np.array([0, len(pats[0])], np.int64); self.cnt[:] = 0; self.cnti[:] = 0; self._ev[0, 0] = 0
+        if 'ad2' not in S: S['ad2'] = np.zeros(self.ne)                 # a state saved before the per-cell slow adaptation existed
         Z.run(n, S['step'], P, *S['E'], *S['I'], *S['tr'], *S['stp'], *S['ee'], S['ee_ws'], S['ee_pl'], *S['se'], S['se_ws'], *S['ie'], S['ie_w'],
-              S['ei'][0], S['ei'][1], S['ii'][0], S['ii'][1], *S['dl'], S['sched'], S['pf'], ptr, pats[0], self.cnt, self.cnti, self._t, self._i, self._n, self._ev)
+              S['ei'][0], S['ei'][1], S['ii'][0], S['ii'][1], *S['dl'], S['sched'], S['pf'], ptr, pats[0], self.cnt, self.cnti, self._t, self._i, self._n, self._ev, S['ad2'])
         S['step'] += n
         return self.cnt / seconds
 

@@ -84,10 +84,10 @@ def build(seed=1, wee=0.1, wie=0.2, xi=0.5, sparse=0.05, alpha=4.0, sparse_ee=No
 
 
 def params(eta=1e-3, beta=0.05, delta=0.02, alpha=4.0, taud=0.15, tauf=0.6, U=0.2, bg=5.0, scale=25.0, on=1.0, off=2.0, wei=0.2, wii=0.2,
-           wmax=5.0, wmaxi=5.0, wa=0.0, wc=0.5, pot=0.1, hom=0.0, tauh=600.0, kappa=10.0, plastic=1.0, seq=0.0, tau_pre=0.02, adapt2=0.0, ee_on=1.0, wmax2=5.0, ne=NE):
+           wmax=5.0, wmaxi=5.0, wa=0.0, wc=0.5, pot=0.1, hom=0.0, tauh=600.0, kappa=10.0, plastic=1.0, seq=0.0, tau_pre=0.02, adapt2=0.0, ee_on=1.0, wmax2=5.0, ne=NE, tau2=20.0):
     wt = (wc - wa) / 4.0; norm = (wt - wa) * (wt - (wa + wc) / 2) * (wt - wc)
     return np.array([eta, beta, delta * (eta / 1e-3) * eta, wmax, 3 * wei, wii, wmaxi, (eta / 50) / (alpha * ne), alpha * ne, taud, tauf, U, bg, scale, on, off,
-                     pot / norm, wa, (wa + wc) / 2, wc, hom, tauh, kappa, plastic, seq, tau_pre, adapt2, ee_on, wmax2])
+                     pot / norm, wa, (wa + wc) / 2, wc, hom, tauh, kappa, plastic, seq, tau_pre, adapt2, ee_on, wmax2, tau2])
 
 
 @njit(cache=True)
@@ -100,7 +100,7 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
         xE, uE, xEI, uEI, xS, uS, lastE, lastS,
         ee_ptr, ee_post, ee_bptr, ee_bpos, ee_bpre, ee_pre, ee_ws, ee_pl, se_ptr, se_post, se_bptr, se_bpos, se_bpre, se_pre, se_ws,
         ie_ptr, ie_post, ie_bptr, ie_bpos, ie_bpre, ie_pre, ie_w, ei_ptr, ei_post, ii_ptr, ii_post,
-        dE, dEa, dEa2, dEn, dI, dIn, dS, dSa, dSn, sched, pf, pat_ptr, pat_idx, cntE, cntI, rec_t, rec_i, rec_n, ev):
+        dE, dEa, dEa2, dEn, dI, dIn, dS, dSa, dSn, sched, pf, pat_ptr, pat_idx, cntE, cntI, rec_t, rec_i, rec_n, ev, ad2):
     eta, beta, delta, wmax, w_ei, w_ii, wmaxi, lr, expected = P[0], P[1], P[2], P[3], P[4], P[5], P[6], P[7], P[8]
     taud, tauf, U, bg, scale, mon, moff, pot, wa, wb, wc = P[9], P[10], P[11], P[12], P[13], P[14], P[15], P[16], P[17], P[18], P[19]
     use_hom = P[20] > 0; tauh = P[21]; kappa = P[22]; plastic = P[23] > 0; seq = P[24] > 0     # seq: patterns in fixed order 0, 1, 2, ... (not used by the paper)
@@ -113,7 +113,9 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
     dpre = exp(-dt / P[25]); eta_ee = eta * 0.02 / P[25]
     # adapt2: the second, long-lasting adaptation of the excitatory cells (paper: Methods, used in its Fig. 4c; the simulator's
     # neuron class AIF2Group: decay 20 s, default jump 0.002; the paper's run scripts leave it at 0)
-    dg2 = P[26]; s_ad2 = exp(-dt / 20.0)
+    # ad2 (per cell, added to the jump P[26]) and tau2 = P[29] (decay, default 20 s): only some cells get it, e.g. motor cells
+    # that tire (not the paper's; added 2026-11-18 for check_voice.py)
+    dg2 = P[26]; s_ad2 = exp(-dt / P[29])
     wmax2 = P[28]
     ee_on = P[27] > 0                                                # 0: the E -> E synapses are switched off (no loop among the excitatory cells) - a control, not the paper
     ne = memE.shape[0]; ni = memI.shape[0]; ns = xS.shape[0]; npat = pat_ptr.shape[0] - 1; nd = dE.shape[0]
@@ -144,7 +146,7 @@ def run(nsteps, step0, P, memE, thrE, gaE, ggE, gnE, gadE, gad2E, memI, thrI, ga
         nE = 0
         for i in range(ne):
             if memE[i] > thr_rest + thrE[i]:
-                memE[i] = e_rest; thrE[i] = dthr; gadE[i] += 0.1; gad2E[i] += dg2; spE[nE] = i; nE += 1
+                memE[i] = e_rest; thrE[i] = dthr; gadE[i] += 0.1; gad2E[i] += dg2 + ad2[i]; spE[nE] = i; nE += 1
         # ---- inhibitory cells (IFGroup: currents from the values before their decay)
         for i in range(ni): thrI[i] *= s_thr
         for i in range(ni):
@@ -279,6 +281,7 @@ class Sim:
         S = self.S; n = int(round(seconds / DT))
         if len(S['E']) == 6: S['E'].append(np.zeros(NE))                      # a state saved before the slow adaptation existed
         if 'ee_pl' not in S: S['ee_pl'] = np.ones(len(S['ee_ws']), np.int8)
+        if 'ad2' not in S: S['ad2'] = np.zeros(NE)                              # per-cell extra jump of the slow adaptation (0: none)
         pat_ptr = np.concatenate([[0], np.cumsum([len(p) for p in pats])]).astype(np.int64); pat_idx = np.concatenate(pats)
         rec_t = np.zeros(max_spikes, np.int64) if record else self.none_t
         rec_i = np.zeros(max_spikes, np.int32) if record else self.none_i
@@ -286,7 +289,7 @@ class Sim:
         self.cntE[:] = 0; self.cntI[:] = 0
         run(n, S['step'], P, *S['E'], *S['I'], *S['tr'], *S['stp'], *S['ee'], S['ee_ws'], S['ee_pl'], *S['se'], S['se_ws'],
             *S['ie'], S['ie_w'], S['ei'][0], S['ei'][1], S['ii'][0], S['ii'][1], *S['dl'], S['sched'], S['pf'], pat_ptr, pat_idx,
-            self.cntE, self.cntI, rec_t, rec_i, rec_n, ev)
+            self.cntE, self.cntI, rec_t, rec_i, rec_n, ev, S['ad2'])
         S['step'] += n; k = int(ev[0, 0])
         sp = (rec_t[:rec_n[0]].copy(), rec_i[:rec_n[0]].copy()) if record else None
         return self.cntE.mean() / seconds, self.cntI.mean() / seconds, ev[1:k + 1].copy(), sp
