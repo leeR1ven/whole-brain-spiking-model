@@ -22,6 +22,7 @@
 | `run_brain.py` `check_*.py` | 整脑运行；各部分单独和论文对照 |
 | `zenke.py` `run_zenke.py` `zenke_ana.py` | 重现 Zenke, Agnes & Gerstner 2015：学出细胞群并保持活动 |
 | `check_sequence.py` `check_replay.py` `check_concept.py` | 在上面那个网络里测"学顺序"和"概念细胞怎么形成" |
+| `rate_units.py` `check_rate_units.py` | 同一个网络不用脉冲（每个细胞一个放电率，输入—输出曲线从脉冲网络量出）及其与脉冲版本的对照 |
 | `maes.py` `run_maes.py` | 重现 Maes, Barahona & Clopath 2020：循环网络学会并自己回放顺序 |
 | `area_learn.py` `check_area_learning.py` | 把学习规则放进一个分层皮层区的试验 |
 | `tools/` | 查论文、抽表格、取图谱坐标的小工具；`fetch_sources.sh` 下载运行所需的第三方代码和数据 |
